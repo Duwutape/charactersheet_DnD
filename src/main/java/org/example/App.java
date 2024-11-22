@@ -39,12 +39,12 @@ public class App extends Application {
         }
 
         if (stage.getTitle().equals(MENU)) {
-            stage.setWidth(405);
-            stage.setHeight(400);
+            stage.setWidth(436 + WIN_WIDTH_DIFF);
+            stage.setHeight(400 + WIN_HEIGHT_DIFF);
         }
         if (stage.getTitle().equals(CREATE_CHAR)) {
-            stage.setWidth(324);
-            stage.setHeight(424);
+            stage.setWidth(324 + WIN_WIDTH_DIFF);
+            stage.setHeight(494 + WIN_HEIGHT_DIFF);
         }
 
         if (this.controller != null) {

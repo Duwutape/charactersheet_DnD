@@ -2,23 +2,16 @@ package org.example.controller;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.example.App;
 import org.example.Constants;
 import org.example.Main;
 
-import javax.swing.text.html.ImageView;
-import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 
-public class MenuController implements Controller{
+public class MenuController implements Controller {
 
     private final App app;
     private final Stage primaryStage;

@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.example.App;
 import org.example.Constants;
@@ -48,8 +49,10 @@ public class CreateController implements Controller{
 
         Hyperlink folderLink = (Hyperlink) parent.lookup("#link_folder");
         imgButton = (Button) parent.lookup("#button_img");
+        Button backButton = (Button) parent.lookup("#button_prev");
+        Button nextButton = (Button) parent.lookup("#button_next");
 
-        folderLink.setOnAction(event -> {
+        folderLink.setOnAction(action -> {
             try {
                 Desktop.getDesktop().open(new File("src/main/resources/char_images/custom_images"));
             } catch (IOException e) {
@@ -59,8 +62,16 @@ public class CreateController implements Controller{
 
         updateImg();
 
-        imgButton.setOnAction(event -> {
+        imgButton.setOnAction(action -> {
             createPicPopup();
+        });
+
+        backButton.setOnAction(action -> {
+            app.show(new MenuController(app, primaryStage));
+        });
+
+        nextButton.setOnAction(action -> {
+
         });
 
         return parent;
@@ -91,8 +102,8 @@ public class CreateController implements Controller{
         popup.close();
     }
 
-    public void receiveImg() {
-        image = pictureController.getSelectedImg();
+    public void setImage(Image image) {
+        this.image = image;
         updateImg();
     }
 

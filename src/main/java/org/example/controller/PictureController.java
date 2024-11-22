@@ -57,7 +57,7 @@ public class PictureController implements Controller {
         backButton.setOnAction(action -> createController.stopPicPopup());
 
         selectButton.setOnAction(action -> {
-            createController.receiveImg();
+            createController.setImage(selectedImg);
             createController.stopPicPopup();
         });
 
