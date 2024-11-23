@@ -44,9 +44,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="381.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="410.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="395.0" prefWidth="324.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="410.0" prefWidth="324.0" VBox.vgrow="ALWAYS">
          <children>
             <Label layoutX="97.0" layoutY="20.0" text="Create new Character">
                <font>
@@ -78,7 +78,7 @@
               </items>
             </MenuButton>
             <Label layoutX="106.0" layoutY="299.0" text="Species:" />
-            <MenuButton fx:id="selecct_species" layoutX="184.0" layoutY="295.0" mnemonicParsing="false" prefWidth="150.0" text="Select Species">
+            <MenuButton fx:id="select_species" layoutX="184.0" layoutY="295.0" mnemonicParsing="false" prefWidth="150.0" text="Select Species">
                <items>
                   <MenuItem mnemonicParsing="false" text="Dragonborn" />
                   <MenuItem mnemonicParsing="false" text="Dwarf (Hill)" />
@@ -98,7 +98,7 @@
                </items>
             </MenuButton>
             <Label layoutX="106.0" layoutY="334.0" text="Level:" />
-            <MenuButton fx:id="selecct_level" layoutX="184.0" layoutY="330.0" mnemonicParsing="false" prefWidth="150.0" text="Select Level">
+            <MenuButton fx:id="select_level" layoutX="184.0" layoutY="330.0" mnemonicParsing="false" prefWidth="150.0" text="Select Level">
                <items>
                   <MenuItem mnemonicParsing="false" text="1" />
                   <MenuItem mnemonicParsing="false" text="2" />
@@ -140,6 +140,13 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Label layoutX="106.0" layoutY="369.0" text="Version:" />
+            <MenuButton fx:id="select_version" layoutX="184.0" layoutY="365.0" mnemonicParsing="false" prefWidth="150.0" text="Select Version">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="2014" />
+                  <MenuItem mnemonicParsing="false" text="2024" />
+               </items>
+            </MenuButton>
          </children>
     </AnchorPane>
   </children>

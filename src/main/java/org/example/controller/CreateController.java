@@ -60,6 +60,7 @@ public class CreateController implements Controller{
         MenuButton classSelect = (MenuButton) parent.lookup("#select_class");
         MenuButton speciesSelect = (MenuButton) parent.lookup("#select_species");
         MenuButton levelSelect = (MenuButton) parent.lookup("#select_level");
+        MenuButton versionSelect = (MenuButton) parent.lookup("#select_verion");
 
         folderLink.setOnAction(action -> {
             try {
