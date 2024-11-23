@@ -29,6 +29,7 @@ public class Char {
 
     public void setGameClass(GameClass gameClass) {
         this.gameClass = gameClass;
+        gameClass.setChar(this);
     }
 
     public Species getSpecies() {
