@@ -1,12 +1,13 @@
 package org.example.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class GameClass {
     //basic
     private ArrayList<String> primaryAbilities = new ArrayList<>();
-    private String hitDice;
-    private String hitDiceMod;
+    private String hitDie;
+    private String hitDieMod;
     private ArrayList<String> savingThrowProfs = new ArrayList<>();
     private ArrayList<String> weaponProfs = new ArrayList<>();
     private int profBonus;
@@ -19,15 +20,7 @@ public class GameClass {
     private int amountCantrip;
     private ArrayList<Spell> cantrips;
     private int amountPreparedSpells;
-    private int spellSlotsLvl1;
-    private int spellSlotsLvl2;
-    private int spellSlotsLvl3;
-    private int spellSlotsLvl4;
-    private int spellSlotsLvl5;
-    private int spellSlotsLvl6;
-    private int spellSlotsLvl7;
-    private int spellSlotsLvl8;
-    private int spellSlotsLvl9;
+    private HashMap<Integer, Integer> spellSlots;
     private ArrayList<Spell> spells;
 
     public GameClass(int level) {
@@ -47,20 +40,20 @@ public class GameClass {
         this.primaryAbilities.add(primaryAbility);
     }
 
-    public String getHitDice() {
-        return hitDice;
+    public String getHitDie() {
+        return hitDie;
     }
 
-    public void setHitDice(String hitDice) {
-        this.hitDice = hitDice;
+    public void setHitDie(String hitDie) {
+        this.hitDie = hitDie;
     }
 
-    public String getHitDiceMod() {
-        return hitDiceMod;
+    public String getHitDieMod() {
+        return hitDieMod;
     }
 
-    public void setHitDiceMod(String hitDiceMod) {
-        this.hitDiceMod = hitDiceMod;
+    public void setHitDieMod(String hitDieMod) {
+        this.hitDieMod = hitDieMod;
     }
 
     public ArrayList<String> getSavingThrowProfs() {
@@ -172,76 +165,21 @@ public class GameClass {
         this.amountPreparedSpells = amountPreparedSpells;
     }
 
-    public int getSpellSlotsLvl1() {
-        return spellSlotsLvl1;
+    public HashMap<Integer, Integer> getSpellSlots() {
+        return spellSlots;
     }
 
-    public void setSpellSlotsLvl1(int spellSlotsLvl1) {
-        this.spellSlotsLvl1 = spellSlotsLvl1;
+    public void setSpellSlots(HashMap<Integer, Integer> spellSlots) {
+        this.spellSlots = spellSlots;
     }
 
-    public int getSpellSlotsLvl2() {
-        return spellSlotsLvl2;
-    }
-
-    public void setSpellSlotsLvl2(int spellSlotsLvl2) {
-        this.spellSlotsLvl2 = spellSlotsLvl2;
-    }
-
-    public int getSpellSlotsLvl3() {
-        return spellSlotsLvl3;
-    }
-
-    public void setSpellSlotsLvl3(int spellSlotsLvl3) {
-        this.spellSlotsLvl3 = spellSlotsLvl3;
-    }
-
-    public int getSpellSlotsLvl4() {
-        return spellSlotsLvl4;
-    }
-
-    public void setSpellSlotsLvl4(int spellSlotsLvl4) {
-        this.spellSlotsLvl4 = spellSlotsLvl4;
-    }
-
-    public int getSpellSlotsLvl5() {
-        return spellSlotsLvl5;
-    }
-
-    public void setSpellSlotsLvl5(int spellSlotsLvl5) {
-        this.spellSlotsLvl5 = spellSlotsLvl5;
-    }
-
-    public int getSpellSlotsLvl6() {
-        return spellSlotsLvl6;
-    }
-
-    public void setSpellSlotsLvl6(int spellSlotsLvl6) {
-        this.spellSlotsLvl6 = spellSlotsLvl6;
-    }
-
-    public int getSpellSlotsLvl7() {
-        return spellSlotsLvl7;
-    }
-
-    public void setSpellSlotsLvl7(int spellSlotsLvl7) {
-        this.spellSlotsLvl7 = spellSlotsLvl7;
-    }
-
-    public int getSpellSlotsLvl8() {
-        return spellSlotsLvl8;
-    }
-
-    public void setSpellSlotsLvl8(int spellSlotsLvl8) {
-        this.spellSlotsLvl8 = spellSlotsLvl8;
-    }
-
-    public int getSpellSlotsLvl9() {
-        return spellSlotsLvl9;
-    }
-
-    public void setSpellSlotsLvl9(int spellSlotsLvl9) {
-        this.spellSlotsLvl9 = spellSlotsLvl9;
+    /**
+     Add or modify amount of spell slots.
+     @param level level of spell slot to be added/modified
+     @param amount (new) amount of spell slots
+     */
+    public void addSpellSlot(Integer level, Integer amount) {
+        this.spellSlots.put(level, amount);
     }
 
     public ArrayList<Spell> getSpells() {
