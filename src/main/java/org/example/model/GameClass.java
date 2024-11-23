@@ -1,6 +1,7 @@
 package org.example.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class GameClass {
@@ -17,8 +18,6 @@ public class GameClass {
     private ArrayList<String> feats = new ArrayList<>();
 
     //spells (bard/cleric/druid/paladin/ranger/sorcerer/warlock/wizard)
-    private int amountCantrip;
-    private ArrayList<Spell> cantrips;
     private int amountPreparedSpells;
     private HashMap<Integer, Integer> spellSlots;
     private ArrayList<Spell> spells;
@@ -36,8 +35,8 @@ public class GameClass {
         this.primaryAbilities = primaryAbilities;
     }
 
-    public void addPrimaryAbilities(String primaryAbility) {
-        this.primaryAbilities.add(primaryAbility);
+    public void addPrimaryAbilities(String... primaryAbilities) {
+        this.primaryAbilities.addAll(Arrays.asList(primaryAbilities));
     }
 
     public String getHitDie() {
@@ -64,8 +63,8 @@ public class GameClass {
         this.savingThrowProfs = savingThrowProfs;
     }
 
-    public void addSavingThrowProfs(String savingThrowProf) {
-        this.savingThrowProfs.add(savingThrowProf);
+    public void addSavingThrowProfs(String... savingThrowProfs) {
+        this.savingThrowProfs.addAll(Arrays.asList(savingThrowProfs));
     }
 
     public ArrayList<String> getWeaponProfs() {
@@ -76,8 +75,8 @@ public class GameClass {
         this.weaponProfs = weaponProfs;
     }
 
-    public void addWeaponProfs(String weaponProf) {
-        this.weaponProfs.add(weaponProf);
+    public void addWeaponProfs(String... weaponProfs) {
+        this.weaponProfs.addAll(Arrays.asList(weaponProfs));
     }
 
     public int getProfBonus() {
@@ -96,8 +95,8 @@ public class GameClass {
         this.armorTraining = armorTraining;
     }
 
-    public void setArmorTraining(String armorTraining) {
-        this.armorTraining.add(armorTraining);
+    public void setArmorTraining(String... armorTraining) {
+        this.armorTraining.addAll(Arrays.asList(armorTraining));
     }
 
     public int getLevel() {
@@ -120,8 +119,8 @@ public class GameClass {
         this.features = features;
     }
 
-    public void addFeatures(String feature) {
-        this.features.add(feature);
+    public void addFeatures(String... features) {
+        this.features.addAll(Arrays.asList(features));
     }
 
     public ArrayList<String> getFeats() {
@@ -132,31 +131,11 @@ public class GameClass {
         this.feats = feats;
     }
 
-    public void addFeats(String feat) {
-        this.feats.add(feat);
+    public void addFeats(String... feats) {
+        this.feats.addAll(Arrays.asList(feats));
     }
 
     //spells
-    public int getAmountCantrip() {
-        return amountCantrip;
-    }
-
-    public void setAmountCantrip(int amountCantrip) {
-        this.amountCantrip = amountCantrip;
-    }
-
-    public ArrayList<Spell> getCantrips() {
-        return cantrips;
-    }
-
-    public void setCantrips(ArrayList<Spell> cantrips) {
-        this.cantrips = cantrips;
-    }
-
-    public void addCantrips(Spell cantrip) {
-        this.cantrips.add(cantrip);
-    }
-
     public int getAmountPreparedSpells() {
         return amountPreparedSpells;
     }
@@ -175,7 +154,7 @@ public class GameClass {
 
     /**
      Add or modify amount of spell slots.
-     @param level level of spell slot to be added/modified
+     @param level level of spell slot to be added/modified (0 = cantrip)
      @param amount (new) amount of spell slots
      */
     public void addSpellSlot(Integer level, Integer amount) {
@@ -190,7 +169,7 @@ public class GameClass {
         this.spells = spells;
     }
 
-    public void addSpells(Spell spell) {
-        spells.add(spell);
+    public void addSpells(Spell... spells) {
+        this.spells.addAll(Arrays.asList(spells));
     }
 }
