@@ -5,6 +5,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
@@ -12,6 +14,8 @@ import javafx.stage.Stage;
 import org.example.App;
 import org.example.Constants;
 import org.example.Main;
+import org.example.model.Char;
+import org.example.service.CreateService;
 
 import java.awt.*;
 import java.io.File;
@@ -24,6 +28,7 @@ public class CreateController implements Controller{
     private final Stage primaryStage;
 
     private final PictureController pictureController = new PictureController(this);
+    private final CreateService createService = new CreateService();
     private Button imgButton;
     private Image image;
     private Stage popup;
@@ -51,6 +56,10 @@ public class CreateController implements Controller{
         imgButton = (Button) parent.lookup("#button_img");
         Button backButton = (Button) parent.lookup("#button_prev");
         Button nextButton = (Button) parent.lookup("#button_next");
+        TextField nameField = (TextField) parent.lookup("#field_name");
+        MenuButton classSelect = (MenuButton) parent.lookup("#select_class");
+        MenuButton speciesSelect = (MenuButton) parent.lookup("#select_species");
+        MenuButton levelSelect = (MenuButton) parent.lookup("#select_level");
 
         folderLink.setOnAction(action -> {
             try {
