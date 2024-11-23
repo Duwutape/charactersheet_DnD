@@ -59,9 +59,9 @@
             <Hyperlink fx:id="link_folder" layoutX="292.0" layoutY="195.0" prefHeight="17.0" text="this folder" />
             <Label layoutX="350.0" layoutY="198.0" text="." />
             <Label layoutX="106.0" layoutY="229.0" text="Name:" />
-            <TextField layoutX="184.0" layoutY="225.0" prefWidth="150.0" promptText="Name" />
+            <TextField fx:id="field_name" layoutX="184.0" layoutY="225.0" prefWidth="150.0" promptText="Name" />
             <Label layoutX="106.0" layoutY="264.0" text="Class:" />
-            <MenuButton layoutX="184.0" layoutY="260.0" mnemonicParsing="false" prefWidth="150.0" text="Select Class">
+            <MenuButton fx:id="select_class" layoutX="184.0" layoutY="260.0" mnemonicParsing="false" prefWidth="150.0" text="Select Class">
               <items>
                 <MenuItem mnemonicParsing="false" text="Barbarian" />
                 <MenuItem mnemonicParsing="false" text="Bard" />
@@ -78,7 +78,7 @@
               </items>
             </MenuButton>
             <Label layoutX="106.0" layoutY="299.0" text="Species:" />
-            <MenuButton layoutX="184.0" layoutY="295.0" mnemonicParsing="false" prefWidth="150.0" text="Select Species">
+            <MenuButton fx:id="selecct_species" layoutX="184.0" layoutY="295.0" mnemonicParsing="false" prefWidth="150.0" text="Select Species">
                <items>
                   <MenuItem mnemonicParsing="false" text="Dragonborn" />
                   <MenuItem mnemonicParsing="false" text="Dwarf (Hill)" />
@@ -98,7 +98,7 @@
                </items>
             </MenuButton>
             <Label layoutX="106.0" layoutY="334.0" text="Level:" />
-            <MenuButton layoutX="184.0" layoutY="330.0" mnemonicParsing="false" prefWidth="150.0" text="Select Level">
+            <MenuButton fx:id="selecct_level" layoutX="184.0" layoutY="330.0" mnemonicParsing="false" prefWidth="150.0" text="Select Level">
                <items>
                   <MenuItem mnemonicParsing="false" text="1" />
                   <MenuItem mnemonicParsing="false" text="2" />
