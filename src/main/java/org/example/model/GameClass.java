@@ -5,7 +5,9 @@ import java.util.Arrays;
 import java.util.HashMap;
 
 public class GameClass {
-    //basic
+    private Char aChar;
+
+    //all classes
     private ArrayList<String> primaryAbilities = new ArrayList<>();
     private String hitDie;
     private String hitDieMod;
@@ -16,17 +18,29 @@ public class GameClass {
     private int level;
     private ArrayList<String> features = new ArrayList<>();
     private ArrayList<String> feats = new ArrayList<>();
+    private String subclass;
 
     //spells (bard/cleric/druid/paladin/ranger/sorcerer/warlock/wizard)
     private int amountPreparedSpells;
     private HashMap<Integer, Integer> spellSlots;
     private ArrayList<Spell> spells;
 
+    //choose
+    private ArrayList<Choice> choose = new ArrayList<>();
+
     public GameClass(int level) {
         this.level = level;
     }
 
-    // basic
+    public Char getChar() {
+        return aChar;
+    }
+
+    public void setChar(Char aChar) {
+        this.aChar = aChar;
+    }
+
+    // all classes
     public ArrayList<String> getPrimaryAbilities() {
         return primaryAbilities;
     }
@@ -95,7 +109,7 @@ public class GameClass {
         this.armorTraining = armorTraining;
     }
 
-    public void setArmorTraining(String... armorTraining) {
+    public void addArmorTraining(String... armorTraining) {
         this.armorTraining.addAll(Arrays.asList(armorTraining));
     }
 
@@ -135,6 +149,14 @@ public class GameClass {
         this.feats.addAll(Arrays.asList(feats));
     }
 
+    public String getSubclass() {
+        return subclass;
+    }
+
+    public void setSubclass(String subclass) {
+        this.subclass = subclass;
+    }
+
     //spells
     public int getAmountPreparedSpells() {
         return amountPreparedSpells;
@@ -171,5 +193,17 @@ public class GameClass {
 
     public void addSpells(Spell... spells) {
         this.spells.addAll(Arrays.asList(spells));
+    }
+
+    public ArrayList<Choice> getChoose() {
+        return choose;
+    }
+
+    public void setChoose(ArrayList<Choice> choose) {
+        this.choose = choose;
+    }
+
+    public void addChoose(Choice choose) {
+        this.choose.add(choose);
     }
 }
