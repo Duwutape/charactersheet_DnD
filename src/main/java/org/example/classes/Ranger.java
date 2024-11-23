@@ -6,6 +6,10 @@ public class Ranger extends GameClass {
 
     private int favoredEnemy;
 
+    public Ranger(int level) {
+        super(level);
+    }
+
     public int getFavoredEnemy() {
         return favoredEnemy;
     }

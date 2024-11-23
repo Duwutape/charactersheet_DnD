@@ -6,4 +6,35 @@ public class Char {
     private Species species;
     private int level;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public GameClass getGameClass() {
+        return gameClass;
+    }
+
+    public void setGameClass(GameClass gameClass) {
+        this.gameClass = gameClass;
+    }
+
+    public Species getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(Species species) {
+        this.species = species;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
 }

@@ -6,6 +6,10 @@ public class Rogue extends GameClass {
 
     private String sneakAttackDice;
 
+    public Rogue(int level) {
+        super(level);
+    }
+
     public String getSneakAttackDice() {
         return sneakAttackDice;
     }

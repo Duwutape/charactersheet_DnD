@@ -6,6 +6,10 @@ public class Sorcerer extends GameClass {
 
     private int sorceryPoints;
 
+    public Sorcerer(int level) {
+        super(level);
+    }
+
     public int getSorceryPoints() {
         return sorceryPoints;
     }

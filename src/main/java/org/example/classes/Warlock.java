@@ -6,6 +6,10 @@ public class Warlock extends GameClass {
 
     private int invocations;
 
+    public Warlock(int level) {
+        super(level);
+    }
+
     public int getInvocations() {
         return invocations;
     }

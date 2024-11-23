@@ -6,6 +6,10 @@ public class Cleric extends GameClass {
 
     private int channelDivinity;
 
+    public Cleric(int level) {
+        super(level);
+    }
+
     public int getChannelDivinity() {
         return channelDivinity;
     }

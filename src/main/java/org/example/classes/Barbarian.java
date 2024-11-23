@@ -8,6 +8,10 @@ public class Barbarian extends GameClass {
     private int rageMod;
     private int weaponMastery;
 
+    public Barbarian(int level) {
+        super(level);
+    }
+
     public int getAmountRages() {
         return amountRages;
     }

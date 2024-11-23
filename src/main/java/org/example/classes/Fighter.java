@@ -7,6 +7,10 @@ public class Fighter extends GameClass {
     private int secondWind;
     private int weaponMastery;
 
+    public Fighter(int level) {
+        super(level);
+    }
+
     public int getSecondWind() {
         return secondWind;
     }

@@ -6,6 +6,10 @@ public class Bard extends GameClass {
 
     private String bardicDie;
 
+    public Bard(int level) {
+        super(level);
+    }
+
     public String getBardicDie() {
         return bardicDie;
     }

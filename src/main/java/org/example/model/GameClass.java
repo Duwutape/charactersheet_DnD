@@ -30,6 +30,10 @@ public class GameClass {
     private int spellSlotsLvl9;
     private ArrayList<Spell> spells;
 
+    public GameClass(int level) {
+        this.level = level;
+    }
+
     // basic
     public ArrayList<String> getPrimaryAbilities() {
         return primaryAbilities;
@@ -109,6 +113,10 @@ public class GameClass {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    public void increaseLevel() {
+        this.level++;
     }
 
     public ArrayList<String> getFeatures() {

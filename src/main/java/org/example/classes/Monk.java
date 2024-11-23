@@ -8,6 +8,10 @@ public class Monk extends GameClass {
     private int focusPoints;
     private int unarmoredMovement;
 
+    public Monk(int level) {
+        super(level);
+    }
+
     public String getMartialArtsDie() {
         return martialArtsDie;
     }

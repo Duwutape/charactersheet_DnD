@@ -6,6 +6,10 @@ public class Druid extends GameClass {
 
     private int wildShape;
 
+    public Druid(int level) {
+        super(level);
+    }
+
     public int getWildShape() {
         return wildShape;
     }
