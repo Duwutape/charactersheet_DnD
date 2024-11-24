@@ -4,17 +4,17 @@ import org.example.model.GameClass;
 
 public class Bard extends GameClass {
 
-    private String bardicDie;
+    private String amountBardicInspiration;
 
     public Bard(int level) {
         super(level);
     }
 
-    public String getBardicDie() {
-        return bardicDie;
+    public String getAmountBardicInspiration() {
+        return amountBardicInspiration;
     }
 
-    public void setBardicDie(String bardicDie) {
-        this.bardicDie = bardicDie;
+    public void setAmountBardicInspiration(String amountBardicInspiration) {
+        this.amountBardicInspiration = amountBardicInspiration;
     }
 }
