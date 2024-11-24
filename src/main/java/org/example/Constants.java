@@ -198,9 +198,11 @@ public class Constants {
     public static final String JAVELIN = "Javelin";
     public static final String LIGHT_HAMMER = "Light Hammer";
     public static final String MACE = "Mace";
+    public static final String PSYCHIC_BLADE = "Psychic Blade";
     public static final String QUARTERSTAFF = "Quarterstaff";
     public static final String SICKLE = "Sickle";
     public static final String SPEAR = "Spear";
+    public static final String STAFF = "Staff";
     public static final String UNARMED_STRIKE = "Unarmed Strike";
 
     // MARTIAL MELEE
@@ -208,6 +210,7 @@ public class Constants {
     public static final String FLAIL = "Flail";
     public static final String GLAIVE = "Glaive";
     public static final String GREATAXE = "Greataxe";
+    public static final String GREATSWORD = "Greatsword";
     public static final String HALBERD = "Halberd";
     public static final String LANCE = "Lance";
     public static final String LONGSWORD = "Longsword";
@@ -233,6 +236,7 @@ public class Constants {
     public static final String CROSSBOW_HAND = "Crossbow (hand)";
     public static final String CROSSBOW_HEAVY = "Crossbow (heavy)";
     public static final String LONGBOW = "Longbow";
+    public static final String MUSKET = "Musket";
     public static final String NET = "Net";
 
     // ARMOR PROPERTY
