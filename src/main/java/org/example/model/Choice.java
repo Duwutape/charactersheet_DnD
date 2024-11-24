@@ -33,10 +33,6 @@ public class Choice {
         this.options = options;
     }
 
-    public void setOptions(String[] options) {
-        this.options.addAll(Arrays.asList(options));
-    }
-
     public void addOptions(String... options) {
         this.options.addAll(Arrays.asList(options));
     }

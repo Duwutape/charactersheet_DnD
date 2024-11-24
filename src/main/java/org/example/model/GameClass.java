@@ -22,7 +22,7 @@ public class GameClass {
 
     //spells (bard/cleric/druid/paladin/ranger/sorcerer/warlock/wizard)
     private int amountPreparedSpells;
-    private HashMap<Integer, Integer> spellSlots;
+    private HashMap<Integer, Integer> spellSlots = new HashMap<>();
     private ArrayList<Spell> spells;
 
     //choose

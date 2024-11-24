@@ -4,6 +4,8 @@ import org.example.classes.*;
 import org.example.model.Choice;
 import org.example.model.GameClass;
 
+import java.util.HashMap;
+
 import static org.example.Constants.*;
 
 public class GameClassService {
@@ -56,6 +58,13 @@ public class GameClassService {
     private void abilitySkillImprovement(GameClass gameClass){
         Choice choice = new Choice();
         choice.setName(ABILITY_SCORE_IMPROVEMENT);
+        gameClass.addChoose(choice);
+    }
+
+    private void expertise(GameClass gameClass, int amount){
+        Choice choice = new Choice();
+        choice.setName(EXPERTISE);
+        choice.setAmount(amount);
         gameClass.addChoose(choice);
     }
 
@@ -241,30 +250,155 @@ public class GameClassService {
         }
     }
 
-    public void updateBard(Bard bard) {
+    private void updateBard(Bard bard) {
         switch (bard.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+                bard.addPrimaryAbilities(CHARISMA);
+                bard.setHitDie(D8);
+                bard.setHitDieMod(CONSTITUTION);
+                bard.addSavingThrowProfs(DEXTERITY, CHARISMA);
+                Choice choiceSkill = new Choice();
+                choiceSkill.setName(SKILL_PROFICIENCIES);
+                choiceSkill.setAmount(3);
+                choiceSkill.addOptions(ALL_SKILLS);
+                bard.addChoose(choiceSkill);
+                Choice choiceTool = new Choice();
+                choiceTool.setName(TOOL_PROFICIENCIES);
+                choiceTool.setAmount(3);
+                choiceTool.addOptions(INSTRUMENTS);
+                bard.addChoose(choiceTool);
+                bard.addWeaponProfs(SIMPLE_WEAPON);
+                bard.addArmorTraining(LIGHT_ARMOR);
+            }
+            case 1 -> {
+                bard.setProfBonus(2);
+                bard.addFeatures(SPELLCASTING);
+                bard.addFeatures(BARDIC_INSPIRATION_D6);
+                bard.addSpellSlot(0,2);
+                bard.addSpellSlot(1,2);
+                bard.setAmountPreparedSpells(4);
+            }
+            case 2 -> {
+                bard.addFeatures(JACK_OF_ALL_TRADES);
+                if (bard.getChar().getVersion().equals(VERSION_2014)){
+                    bard.addFeatures(SONG_OF_REST_D6);
+                } else {
+                   expertise(bard, 2);
+                }
+                bard.addSpellSlot(1,3);
+                bard.setAmountPreparedSpells(5);
+            }
+            case 3 -> {
+                Choice choice = new Choice();
+                choice.setName(BARD + " " + SUBCLASS);
+                choice.setAmount(1);
+                if (bard.getChar().getVersion().equals(VERSION_2014)){
+                    expertise(bard, 2);
+                    choice.addOptions(LORE, VALOR);
+                } else {
+                    choice.addOptions(DANCE,GLAMOUR,LORE,VALOR);
+                }
+                bard.addChoose(choice);
+                bard.addSpellSlot(1,4);
+                bard.addSpellSlot(2,2);
+                bard.setAmountPreparedSpells(6);
+            }
+            case 4 -> {
+                abilitySkillImprovement(bard);
+                bard.addSpellSlot(0,3);
+                bard.addSpellSlot(2,3);
+                bard.addSpellSlot(3,2);
+                bard.setAmountPreparedSpells(7);
+            }
+            case 5 -> {
+                bard.setProfBonus(3);
+                bard.addFeatureAtIndex(BARDIC_INSPIRATION_D8,bard.getFeatures().indexOf(BARDIC_INSPIRATION_D6));
+                bard.removeFeature(BARDIC_INSPIRATION_D6);
+                bard.addFeatures(FONT_OF_INSPIRATION);
+                if (bard.getChar().getVersion().equals(VERSION_2014)){
+                    bard.setAmountPreparedSpells(8);
+                } else {
+                    bard.setAmountPreparedSpells(9);
+                }
+            }
+            case 6 -> {
+                if (bard.getChar().getVersion().equals(VERSION_2014)){
+                    bard.addFeatures(COUNTERCHARM);
+                    bard.setAmountPreparedSpells(9);
+                } else {
+                    bard.setAmountPreparedSpells(10);
+                }
+                bard.addSpellSlot(3,3);
+                switch (bard.getSubclass()) {
+                    case DANCE -> bard.addFeatures(INSPIRING_MOVEMENT, TANDEM_FOOTWORK);
+                    case GLAMOUR -> bard.addFeatures(MANTLE_OF_MAJESTY);
+                    case LORE -> {
+                        if (bard.getChar().getVersion().equals(VERSION_2014)){
+                            Choice choice = new Choice();
+                            choice.setName(ADDITIONAL_MAGICAL_SECRETS);
+                            choice.setAmount(2);
+                            choice.addOptions();
+                        }
+                        bard.addFeatures(MAGICAL_DISCOVERIES);
+                        bard.setMagicalDiscoveries(true);
+                        Choice choice = new Choice();
+                        choice.setName(MAGICAL_DISCOVERIES);
+                        choice.setAmount(2);
+                        bard.addChoose(choice);
+                    }
+                    case VALOR -> bard.addFeatures(EXTRA_ATTACK);
+                }
+            }
+            case 7 -> {
+
+            }
+            case 8 -> {
+
+            }
+            case 9 -> {
+
+            }
+            case 10 -> {
+
+            }
+            case 11 -> {
+
+            }
+            case 12 -> {
+
+            }
+            case 13 -> {
+
+            }
+            case 14 -> {
+
+            }
+            case 15 -> {
+
+            }
+            case 16 -> {
+
+            }
+            case 17 -> {
+
+            }
+            case 18 -> {
+
+            }
+            case 19 -> {
+
+            }
+            case 20 -> {
+
+            }
         }
+    }
+
+    private void magicalDiscovery(Bard bard) {
+        Choice choice = new Choice();
+        choice.setName(MAGICAL_DISCOVERIES);
+        choice.setAmount(1);
+        bard.addChoose(choice);
     }
 
     public void updateCleric(Cleric cleric) {
