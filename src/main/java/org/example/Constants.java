@@ -1,5 +1,9 @@
 package org.example;
 
+import com.sun.javafx.scene.NodeHelper;
+
+import javax.swing.text.AbstractDocument;
+
 public class Constants {
 
     // SCREEN TITLES
@@ -174,7 +178,7 @@ public class Constants {
     public static final String UNBREAKABLE_MAJESTY = "Unbreakable Majesty";
 
     // COLLEGE OF LORE
-    public static final String CUTTING_WORDS ="Cutting Words";
+    public static final String CUTTING_WORDS = "Cutting Words";
     public static final String ADDITIONAL_MAGICAL_SECRETS = "Additional Magical Secrets";
     public static final String PEERLESS_SKILL = "Peerless Skill";
     public static final String MAGICAL_DISCOVERIES = "Magical Discoveries";
@@ -216,7 +220,7 @@ public class Constants {
     public static final String AMMUNITION = "Ammunition";
     public static final String FINESSE = "Finesse";
     public static final String HEAVY = "Heavy";
-    public static final String LIGHT = "Light";
+    public static final String LIGHT = "Light"; //also used in Spells/Cantrips
     public static final String LOADING = "Loading";
     public static final String RANGE = "Range";
     public static final String REACH = "Reach";
@@ -292,7 +296,7 @@ public class Constants {
     public static final String LIGHT_ARMOR = "light armor";
     public static final String MEDIUM_ARMOR = "medium armor";
     public static final String HEAVY_ARMOR = "heavy armor";
-    public static final String SHIELD = "shield";
+    public static final String SHIELD = "shield"; //also used in SPELLS/LEVEL1
 
     // TOOLS
     // MUSICAL INSTRUMENTS
@@ -309,4 +313,147 @@ public class Constants {
 
     public static final String[] INSTRUMENTS = {BAGPIPES, DRUM, DULCIMER, FLUTE, HORN,
             LUTE, LYRE, PAN_FLUTE, SHAWN, VIOL};
+
+    // SPELLS
+    // CANTRIPS
+    public static final String ACID_SPLASH = "Acid Splash";
+    public static final String BLADE_WARD = "Blade Ward";
+    public static final String CHILL_TOUCH = "Chill Touch";
+    public static final String DANCING_LIGHTS = "Dancing Lights";
+    public static final String DRUIDCRAFT = "Druidcraft";
+    public static final String ELDRITCH_BLAST = "Eldritch Blast";
+    public static final String ELEMENTALISM = "Elementalism";
+    public static final String FIRE_BOLT = "Fire Bolt";
+    public static final String FRIENDS = "Friends";
+    public static final String GUIDANCE = "Guidance";
+    // light in WEAPON PROPERTY
+    public static final String MAGE_HAND = "Mage Hand";
+    public static final String MENDING = "Mending";
+    public static final String MESSAGE = "Message";
+    public static final String MIND_SILVER = "Mind Silver";
+    public static final String MINOR_ILLUSION = "Minor Illusion";
+    public static final String POISON_SPRAY = "Poison Spray";
+    public static final String PRESTIDIGITATION = "Prestidigitation";
+    public static final String PRODUCE_FLAME = "Produce Flame";
+    public static final String RAY_OF_FROST = "Ray of Frost";
+    public static final String RESISTANCE = "Resistance";
+    public static final String SACRED_FLAME = "Sacred Flame";
+    public static final String SHILLELAGH = "Shillelagh";
+    public static final String SHOCKING_GRASP = "Shocking Grasp";
+    public static final String SORCEROUS_BURST = "Sorcerous Burst";
+    public static final String SPARE_THE_DYING = "Spare the Dying";
+    public static final String STARRY_WHIP = "Starry Whip";
+    public static final String THAUMATURGY = "Thaumaturgy";
+    public static final String THORN_WHIP = "Thorn Whip";
+    public static final String THUNDERCLAP = "Thunderclap";
+    public static final String TOLL_THE_DEAD = "Toll the Dead";
+    public static final String TRUE_STRIKE = "True Strike";
+    public static final String VICIOUS_MOCKERY = "Vicious Mockery";
+    public static final String WORLD_OF_RADIANCE = "World of Radiance";
+
+    public static final String[] BARD_CANTRIPS_14 = {BLADE_WARD, DANCING_LIGHTS, FRIENDS, LIGHT, MAGE_HAND, MENDING,
+            MESSAGE, MINOR_ILLUSION, PRESTIDIGITATION, TRUE_STRIKE, VICIOUS_MOCKERY};
+
+    public static final String[] BARD_CANTRIPS_24 = {BLADE_WARD, DANCING_LIGHTS, FRIENDS, LIGHT, MAGE_HAND, MENDING,
+            MESSAGE, MINOR_ILLUSION, PRESTIDIGITATION, STARRY_WHIP, THUNDERCLAP, TRUE_STRIKE, VICIOUS_MOCKERY};
+
+    public static final String[] CLERIC_CANTRIPS_14 = {GUIDANCE, LIGHT, MENDING, RESISTANCE, SACRED_FLAME,
+            SPARE_THE_DYING, THAUMATURGY};
+
+    public static final String[] CLERIC_CANTRIPS_24 = {GUIDANCE, LIGHT, MENDING, RESISTANCE, SACRED_FLAME,
+            SPARE_THE_DYING, THAUMATURGY, TOLL_THE_DEAD, WORLD_OF_RADIANCE};
+
+    public static final String[] DRUID_CANTRIPS_14 = {DRUIDCRAFT, GUIDANCE, MENDING, POISON_SPRAY, PRODUCE_FLAME,
+            RESISTANCE, SHILLELAGH, THORN_WHIP};
+
+    public static final String[] DRUID_CANTRIPS_24 = {DRUIDCRAFT, ELEMENTALISM, GUIDANCE, MENDING, MESSAGE,
+            POISON_SPRAY, PRODUCE_FLAME, RESISTANCE, SHILLELAGH, SPARE_THE_DYING, STARRY_WHIP, THORN_WHIP, THUNDERCLAP};
+
+    public static final String[] SORCERER_CANTRIPS_14 = {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS,
+            FIRE_BOLT, FRIENDS, LIGHT, MAGE_HAND, MENDING, MESSAGE, MINOR_ILLUSION, POISON_SPRAY, PRESTIDIGITATION,
+            RAY_OF_FROST, SHOCKING_GRASP, TRUE_STRIKE};
+
+    public static final String[] SORCERER_CANTRIPS_24 = {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS,
+            ELEMENTALISM, FIRE_BOLT, FRIENDS, LIGHT, MAGE_HAND, MENDING, MESSAGE, MIND_SILVER, MINOR_ILLUSION,
+            POISON_SPRAY, PRESTIDIGITATION, RAY_OF_FROST, SHOCKING_GRASP, SORCEROUS_BURST, THUNDERCLAP, TRUE_STRIKE};
+
+    public static final String[] WARLOCK_CANTRIPS_14 = {BLADE_WARD, CHILL_TOUCH, ELDRITCH_BLAST, FRIENDS, MAGE_HAND,
+            MINOR_ILLUSION, POISON_SPRAY, PRESTIDIGITATION, TRUE_STRIKE};
+
+    public static final String[] WARLOCK_CANTRIPS_24 = {BLADE_WARD, CHILL_TOUCH, ELDRITCH_BLAST, FRIENDS, MAGE_HAND,
+            MIND_SILVER, MINOR_ILLUSION, POISON_SPRAY, PRESTIDIGITATION, THUNDERCLAP, TOLL_THE_DEAD, TRUE_STRIKE};
+
+    public static final String[] WIZARD_CANTRIPS_14 = {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS, FIRE_BOLT,
+            FRIENDS, LIGHT, MAGE_HAND, MENDING, MESSAGE, MINOR_ILLUSION, POISON_SPRAY, PRESTIDIGITATION, RAY_OF_FROST,
+            SHOCKING_GRASP, TRUE_STRIKE};
+
+    public static final String[] WIZARD_CANTRIPS_24 = {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS,
+            ELEMENTALISM, FIRE_BOLT, FRIENDS, LIGHT, MAGE_HAND, MENDING, MESSAGE, MIND_SILVER, MINOR_ILLUSION,
+            POISON_SPRAY, RAY_OF_FROST, SHOCKING_GRASP, THUNDERCLAP, TOLL_THE_DEAD, TRUE_STRIKE};
+
+    // LEVEL 1
+    public static final String ALARM = "Alarm";
+    public static final String ANIMAL_FRIENDSHIP = "Animal Friendship";
+    public static final String ARMOR_OF_AGATHYS = "Armor of Agathys";
+    public static final String ARMS_OF_HADAR = "Arms of Hadar";
+    public static final String BANE = "Bane";
+    public static final String BLESS = "Bless";
+    public static final String BURNING_HANDS = "Burning Hands";
+    public static final String CHARM_PERSON = "Charm Person";
+    public static final String CHROMATIC_ORB = "Chromatic Orb";
+    public static final String COLOR_SPRAY = "Color Spray";
+    public static final String COMMAND = "Command";
+    public static final String COMPELLED_DUEL = "Compelled Duel";
+    public static final String COMPREHEND_LANGUAGES = "Comprehend Languages";
+    public static final String CREATE_OR_DESTROY_WATER = "Create or Destroy Water";
+    public static final String CURE_WOUNDS = "Cure Wounds";
+    public static final String DETECT_EVIL_AND_GOOD = "Detect Evil and Good";
+    public static final String DETECT_MAGIC = "Detect Magic";
+    public static final String DETECT_POISON_AND_DISEASE = "Detect Poison nd Disease ";
+    public static final String DISGUISE_SELF = "Disguise Self";
+    public static final String DISSONANT_WHISPERS = "Dissonant Whispers";
+    public static final String DIVINE_FAVOR = "Divine Favor";
+    public static final String ENSNARING_STRIKE = "Ensnaring Strike";
+    public static final String ENTANGLE = "Entangle";
+    public static final String EXPEDITIOUS_RETREAT = "Expeditious Retreat";
+    public static final String FAERIE_FIRE = "Faerie Fire";
+    public static final String FALSE_LIFE = "False Life";
+    public static final String FEATHER_FALL = "Feather Fall";
+    public static final String FIND_FAMILIAR = "Find Familiar";
+    public static final String  FOG_CLOUD="Fog Cloud";
+    public static final String  GOODBERRY="Goodberry";
+    public static final String  GREASE="Grease";
+    public static final String  GUIDING_BOLT="Guiding Bolt";
+    public static final String  HAIL_OF_THRONES="Hail of Thrones";
+    public static final String  HEALING_WORD="Healing Word";
+    public static final String  HELLISH_REBUKE="Hellish Rebuke";
+    public static final String  HEROISM="Heroism";
+    public static final String  HEX="Hex";
+    public static final String  HUNTERS_MASK="Hunter's Mask";
+    public static final String  IDENTIFY="Identify";
+    public static final String  ILLUSORY_SCRIPT="Illusory Script";
+    public static final String  INFLICT_WOUNDS="Inflict Wounds";
+    public static final String  JUMP="Jump";
+    public static final String  LONGSTRIDER="Longstrider";
+    public static final String  MAGE_ARMOR="Mage Armor";
+    public static final String  MAGIC_MISSILE="Magic Missile";
+    public static final String  PROTECTION_FROM_EVIL_AND_GOOD="Protection from Evil and Good";
+    public static final String  PURIFY_FOOD_AND_DRINK="Purify Food and Drink";
+    public static final String  RAY_OF_SICKNESS="Ray of Sickness";
+    public static final String  SANCTUARY="Sanctuary";
+    public static final String  SEARING_SMITE="Searing Smite";
+    // shield in ARMOR TYPES
+    public static final String  SHIELD_OF_FAITH="Shield of Faith";
+    public static final String  SILENT_IMAGE="Silent Image";
+    public static final String  SLEEP="Sleep";
+    public static final String  SPEAK_WITH_ANIMALS="Speak with Animals";
+    public static final String  TASHAS_HIDEOUS_LAUGHTER="Tasha's Hideous Laughter";
+    public static final String  TENSERS_FLOATING_DISK="Tenser's Floating Disk";
+    public static final String  THUNDEROUS_SMITE="Thunderous Smite";
+    public static final String  THUNDERWAVE="Thunderwave";
+    public static final String  UNSEEN_SERVANT="Unseen Servant";
+    public static final String  WITCH_BOLT="Witch Bolt";
+    public static final String  WRATHFUL_SMITE="Wrathful Smite";
+
+
 }
