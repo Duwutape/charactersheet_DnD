@@ -66,6 +66,7 @@ public class Constants {
     public static final String SUBCLASS = "Subclass";
     public static final String ABILITY_SCORE_IMPROVEMENT = "Ability Score Improvement";
     public static final String SUBCLASS_FEATURE = "Subclass Feature";
+    public static final String EPIC_BOON = "Epic Boon";
 
     // BARBARIAN FEATURES
     public static final String BRUTAL_CRITICAL_1 = "Brutal Critical (1 die)";
@@ -73,8 +74,7 @@ public class Constants {
     public static final String BRUTAL_CRITICAL_3 = "Brutal Critical (3 dice)";
     public static final String BRUTAL_STRIKE = "Brutal Strike";
     public static final String DANGER_SENSE = "Danger Sense";
-    public static final String EPIC_BOON = "Epic Boon";
-    public static final String EXTRA_ATTACK = "Extra Attack";
+    public static final String EXTRA_ATTACK = "Extra Attack"; //also used in bard subclass college of valor
     public static final String FAST_MOVEMENT = "Fast Movement";
     public static final String FERAL_INSTINCT = "Feral Instinct";
     public static final String IMPROVED_BRUTAL_STRIKE_1 = "Improved Brutal Strike 1";
@@ -137,6 +137,53 @@ public class Constants {
     public static final String ZEALOUS_PRESENCE = "Zealous Presence";
     public static final String RAGE_OF_THE_GODS = "Rage of the Gods";
 
+    // BARD FEATURES
+    public static final String BARDIC_INSPIRATION_D6 = "Bardic Inspiration (d6)";
+    public static final String BARDIC_INSPIRATION_D8 = "Bardic Inspiration (d8)";
+    public static final String BARDIC_INSPIRATION_D10 = "Bardic Inspiration (d10)";
+    public static final String BARDIC_INSPIRATION_D12 = "Bardic Inspiration (d12)";
+    public static final String SPELLCASTING = "Spellcasting";
+    public static final String EXPERTISE = "Expertise";
+    public static final String JACK_OF_ALL_TRADES = "Jack of All Trades";
+    public static final String FONT_OF_INSPIRATION = "Font of Inspiration";
+    public static final String COUNTERCHARM = "Countercharm";
+    public static final String MAGICAL_SECRETS = "Magical Secrets";
+    public static final String SUPERIOR_INSPIRATION = "Superior Inspiration";
+    public static final String WORDS_OF_CREATION = "Words of Creation";
+    public static final String SONG_OF_REST_D6 = "Song of Rest (d6)";
+    public static final String SONG_OF_REST_D8 = "Song of Rest (d8)";
+    public static final String SONG_OF_REST_D10 = "Song of Rest (d10)";
+    public static final String SONG_OF_REST_D12 = "Song of Rest (d12)";
+
+    // BARD SUBCLASSES
+    public static final String DANCE = "College of Dance";
+    public static final String GLAMOUR = "College of Glamour";
+    public static final String LORE = "College of Lore";
+    public static final String VALOR = "College of Valor";
+
+    // COLLEGE OF DANCE
+    public static final String DAZZLING_FOOTWORK = "Dazzling Footwork";
+    public static final String INSPIRING_MOVEMENT = "Inspiring Movement";
+    public static final String TANDEM_FOOTWORK = "Tandem Footwork";
+    public static final String LEADING_EVASION = "Leading Evasion";
+
+    // COLLEGE OF GLAMOUR
+    public static final String BEGUILING_MAGIC = "Beguiling Magic";
+    public static final String MANTLE_OF_INSPIRATION = "Mantle of Inspiration";
+    public static final String MANTLE_OF_MAJESTY = "Mantle of Majesty";
+    public static final String UNBREAKABLE_MAJESTY = "Unbreakable Majesty";
+
+    // COLLEGE OF LORE
+    public static final String CUTTING_WORDS ="Cutting Words";
+    public static final String ADDITIONAL_MAGICAL_SECRETS = "Additional Magical Secrets";
+    public static final String PEERLESS_SKILL = "Peerless Skill";
+    public static final String MAGICAL_DISCOVERIES = "Magical Discoveries";
+
+    // COLLEGE OF VALOR
+    public static final String COMBAT_INSPIRATION = "Combat Inspiration";
+    // extra attack in barbarian features
+    public static final String BATTLE_MAGIC = "Battle Magic";
+    public static final String MARTIAL_TRAINING = "Martial Training";
 
     // SKILLS
     public static final String ACROBATICS = "Acrobatics";
@@ -157,7 +204,9 @@ public class Constants {
     public static final String SLEIGHT_OF_HAND = "Sleight of Hand";
     public static final String STEALTH = "Stealth";
     public static final String SURVIVAL = "Survival";
-    public static final String[] ALL_SKILLS = {ACROBATICS, ANIMAL_HANDLING, ARCANA, ATHLETICS, DECEPTION, HISTORY, INSIGHT, INTIMIDATION, INVESTIGATION, MEDICINE, PERCEPTION, PERFORMANCE, PERSUASION, RELIGION, SLEIGHT_OF_HAND, STEALTH, SURVIVAL};
+    public static final String[] ALL_SKILLS = {ACROBATICS, ANIMAL_HANDLING, ARCANA, ATHLETICS, DECEPTION, HISTORY,
+            INSIGHT, INTIMIDATION, INVESTIGATION, MEDICINE, PERCEPTION,
+            PERFORMANCE, PERSUASION, RELIGION, SLEIGHT_OF_HAND, STEALTH, SURVIVAL};
 
     // WEAPON PROFICIENCIES
     public static final String MARTIAL_WEAPON = "martial weapons";
@@ -258,6 +307,6 @@ public class Constants {
     public static final String SHAWN = "Shawn";
     public static final String VIOL = "Viol";
 
-    public static final String[] INSTRUMENTS = {BAGPIPES, DRUM, DULCIMER, FLUTE, HORN, LUTE, LYRE, PAN_FLUTE, SHAWN, VIOL};
-
+    public static final String[] INSTRUMENTS = {BAGPIPES, DRUM, DULCIMER, FLUTE, HORN,
+            LUTE, LYRE, PAN_FLUTE, SHAWN, VIOL};
 }
