@@ -29,7 +29,7 @@ public class PictureController implements Controller {
 
     @Override
     public String getTitle() {
-        return "Charsheet - Choose image";
+        return "CharSheet - Choose image";
     }
 
     @Override

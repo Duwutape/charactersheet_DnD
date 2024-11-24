@@ -19,7 +19,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
         this.stage = primaryStage;
         primaryStage.setScene(new Scene(new Label("Loading...")));
-        primaryStage.setTitle("Charsheet");
+        primaryStage.setTitle("CharSheet");
 
         show(new MenuController(this, primaryStage));
         primaryStage.show();

@@ -43,7 +43,7 @@
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="555.0" VBox.vgrow="ALWAYS">
          <children>
-            <Label layoutX="146.0" layoutY="41.0" text="Charsheet">
+            <Label layoutX="145.0" layoutY="41.0" text="CharSheet">
                <font>
                   <Font name="System Bold" size="24.0" />
                </font>
