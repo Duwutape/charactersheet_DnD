@@ -137,6 +137,14 @@ public class GameClass {
         this.features.addAll(Arrays.asList(features));
     }
 
+    public void addFeatureAtIndex(String feature, int index) {
+        this.features.add(index, feature);
+    }
+
+    public void removeFeature(String feature) {
+        features.remove(feature);
+    }
+
     public ArrayList<String> getFeats() {
         return feats;
     }
@@ -175,9 +183,10 @@ public class GameClass {
     }
 
     /**
-     Add or modify amount of spell slots.
-     @param level level of spell slot to be added/modified (0 = cantrip)
-     @param amount (new) amount of spell slots
+     * Add or modify amount of spell slots.
+     *
+     * @param level  level of spell slot to be added/modified (0 = cantrip)
+     * @param amount (new) amount of spell slots
      */
     public void addSpellSlot(Integer level, Integer amount) {
         this.spellSlots.put(level, amount);
