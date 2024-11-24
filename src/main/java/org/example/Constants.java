@@ -62,6 +62,7 @@ public class Constants {
 
     // FEATURES
     public static final String SKILL_PROFICIENCIES = "Skill Proficiencies";
+    public static final String TOOL_PROFICIENCIES = "Tool Proficiencies";
     public static final String SUBCLASS = "Subclass";
     public static final String ABILITY_SCORE_IMPROVEMENT = "Ability Score Improvement";
     public static final String SUBCLASS_FEATURE = "Subclass Feature";
@@ -156,30 +157,103 @@ public class Constants {
     public static final String SLEIGHT_OF_HAND = "Sleight of Hand";
     public static final String STEALTH = "Stealth";
     public static final String SURVIVAL = "Survival";
+    public static final String[] ALL_SKILLS = {ACROBATICS, ANIMAL_HANDLING, ARCANA, ATHLETICS, DECEPTION, HISTORY, INSIGHT, INTIMIDATION, INVESTIGATION, MEDICINE, PERCEPTION, PERFORMANCE, PERSUASION, RELIGION, SLEIGHT_OF_HAND, STEALTH, SURVIVAL};
 
     // WEAPON PROFICIENCIES
     public static final String MARTIAL_WEAPON = "martial weapons";
     public static final String SIMPLE_WEAPON = "simple weapons";
 
     // WEAPON PROPERTY
-    public static final String LIGHT = "Light";
     public static final String AMMUNITION = "Ammunition";
     public static final String FINESSE = "Finesse";
+    public static final String HEAVY = "Heavy";
+    public static final String LIGHT = "Light";
+    public static final String LOADING = "Loading";
+    public static final String RANGE = "Range";
+    public static final String REACH = "Reach";
+    public static final String Special = "Special";
     public static final String THROWN = "Thrown";
     public static final String TWO_HANDED = "Two-Handed";
     public static final String VERSATILE = "Versatile";
-    public static final String LOADING = "Loading";
-    public static final String RANGE_10 = "10/30ft, 3/9m";
-    public static final String RANGE_20 = "20/60ft, 6/18m";
-    public static final String RANGE_30 = "30/120ft, 9/36.5m";
-    public static final String RANGE_80 = "80/130ft, 24/39.5m";
+
+    // RANGE
+    public static final String RANGE_10_30 = "10/30ft, 3/9m";
+    public static final String RANGE_20_60 = "20/60ft, 6/18m";
+    public static final String RANGE_25_100 = "25/100ft, 7.5/30.5m";
+    public static final String RANGE_30_120 = "30/120ft, 9/36.5m";
+    public static final String RANGE_80_130 = "80/130ft, 24/39.5m";
+    public static final String RANGE_80_320 = "80/320ft, 24/97.5m";
+
+    //AMMUNITION TYPES
     public static final String ARROW = "Arrow";
     public static final String BOLT = "Bolt";
     public static final String SLING_BULLET = "Sling Bullet";
+
+    // WEAPONS
+    // SIMPLE MELEE
+    public static final String CLUB = "Club";
+    public static final String DAGGER = "Dagger";
+    public static final String GREATCLUB = "Greatclub";
+    public static final String HANDAXE = "Handaxe";
+    public static final String JAVELIN = "Javelin";
+    public static final String LIGHT_HAMMER = "Light Hammer";
+    public static final String MACE = "Mace";
+    public static final String QUARTERSTAFF = "Quarterstaff";
+    public static final String SICKLE = "Sickle";
+    public static final String SPEAR = "Spear";
+    public static final String UNARMED_STRIKE = "Unarmed Strike";
+
+    // MARTIAL MELEE
+    public static final String BATTLEAXE = "Battleaxe";
+    public static final String FLAIL = "Flail";
+    public static final String GLAIVE = "Glaive";
+    public static final String GREATAXE = "Greataxe";
+    public static final String HALBERD = "Halberd";
+    public static final String LANCE = "Lance";
+    public static final String LONGSWORD = "Longsword";
+    public static final String MAUL = "Maul";
+    public static final String MORNINGSTAR = "Morningstar";
+    public static final String PIKE = "Pike";
+    public static final String RAPIER = "Rapier";
+    public static final String SCIMITAR = "Scimitar";
+    public static final String SHORTSWORD = "Shortsword";
+    public static final String TRIDENT = "Trident";
+    public static final String WAR_PICK = "War Pick";
+    public static final String WARHAMMER = "Warhammer";
+    public static final String WHIP = "Whip";
+
+    // SIMPLE RANGED
+    public static final String CROSSBOW_LIGHT = "Crossbow (light)";
+    public static final String DART = "Dart";
+    public static final String SHORTBOW = "Shortbow";
+    public static final String SLING = "Sling";
+
+    // MARTIAL RANGED
+    public static final String BLOWGUN = "Blowgun";
+    public static final String CROSSBOW_HAND = "Crossbow (hand)";
+    public static final String CROSSBOW_HEAVY = "Crossbow (heavy)";
+    public static final String LONGBOW = "Longbow";
+    public static final String NET = "Net";
 
     // ARMOR PROPERTY
     public static final String LIGHT_ARMOR = "light armor";
     public static final String MEDIUM_ARMOR = "medium armor";
     public static final String HEAVY_ARMOR = "heavy armor";
     public static final String SHIELD = "shield";
+
+    // TOOLS
+    // MUSICAL INSTRUMENTS
+    public static final String BAGPIPES = "Bagpipes";
+    public static final String DRUM = "Drum";
+    public static final String DULCIMER = "Dulcimer";
+    public static final String FLUTE = "Flute";
+    public static final String HORN = "Horn";
+    public static final String LUTE = "Lute";
+    public static final String LYRE = "Lyre";
+    public static final String PAN_FLUTE = "Pan Flute";
+    public static final String SHAWN = "Shawn";
+    public static final String VIOL = "Viol";
+
+    public static final String[] INSTRUMENTS = {BAGPIPES, DRUM, DULCIMER, FLUTE, HORN, LUTE, LYRE, PAN_FLUTE, SHAWN, VIOL};
+
 }
