@@ -6,7 +6,6 @@ public class Barbarian extends GameClass {
 
     private int amountRages;
     private int rageMod;
-    private int weaponMastery;
 
     public Barbarian(int level) {
         super(level);
@@ -26,13 +25,5 @@ public class Barbarian extends GameClass {
 
     public void setRageMod(int rageMod) {
         this.rageMod = rageMod;
-    }
-
-    public int getWeaponMastery() {
-        return weaponMastery;
-    }
-
-    public void setWeaponMastery(int weaponMastery) {
-        this.weaponMastery = weaponMastery;
     }
 }

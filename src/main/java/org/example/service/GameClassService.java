@@ -86,10 +86,6 @@ public class GameClassService {
             case 1 -> {
                 barbarian.setProfBonus(2);
                 barbarian.addFeatures(RAGE,UNARMORED_DEFENCE);
-                if (barbarian.getChar().getVersion().equals(VERSION_2024)) {
-                    barbarian.addFeatures(WEAPON_MASTERY);
-                    barbarian.setWeaponMastery(2);
-                }
                 barbarian.setAmountRages(2);
                 barbarian.setRageMod(2);
             }
@@ -98,20 +94,12 @@ public class GameClassService {
                 Choice choice = new Choice();
                 choice.setName(BARBARIAN + " " + SUBCLASS);
                 choice.setAmount(1);
-                if (barbarian.getChar().getVersion().equals(VERSION_2014)){
-                    choice.addOptions(BERSERKER,TOTEM_WARRIOR);
-                } else {
-                    choice.addOptions(BERSERKER,WILD_HEART,WORLD_TREE,ZEALOT);
-                    barbarian.addFeatures(PRIMAL_KNOWLEDGE);
-                }
+                choice.addOptions(BERSERKER,TOTEM_WARRIOR);
                 barbarian.addChoose(choice);
                 barbarian.setAmountRages(3);
             }
             case 4 -> {
                 abilitySkillImprovement(barbarian);
-                if (barbarian.getChar().getVersion().equals(VERSION_2024)) {
-                    barbarian.setWeaponMastery(3);
-                }
             }
             case 5 -> {
                 barbarian.setProfBonus(3);
@@ -127,51 +115,23 @@ public class GameClassService {
                         choice.setAmount(1);
                         choice.addOptions(BEAR,EAGLE,WOLF);
                     }
-                    case WILD_HEART -> {
-                        barbarian.addFeatures(ASPECT_OF_THE_WILDS);
-                        Choice choice = new Choice();
-                        choice.setName(ANIMAL_POWER);
-                        choice.setAmount(1);
-                        choice.addOptions(OWL,PANTHER,SALMON);
-                    }
-                    case WORLD_TREE -> barbarian.addFeatures(BRANCHES_OF_THE_TREE);
-                    case ZEALOT -> barbarian.addFeatures(FANATICAL_FOCUS);
                 }
             }
             case 7 -> {
                 barbarian.addFeatures(FERAL_INSTINCT);
-                if (barbarian.getChar().getVersion().equals(VERSION_2024)){
-                    barbarian.addFeatures(INSTINCTIVE_POUNCE);
-                }
             }
             case 8 -> {
                 abilitySkillImprovement(barbarian);
             }
             case 9 -> {
                 barbarian.setProfBonus(4);
-                if (barbarian.getChar().getVersion().equals(VERSION_2014)){
-                    barbarian.addFeatures(BRUTAL_CRITICAL_1);
-                } else {
-                    barbarian.addFeatures(BRUTAL_STRIKE);
-                }
+                barbarian.addFeatures(BRUTAL_CRITICAL_1);
                 barbarian.setRageMod(3);
             }
             case 10 -> {
                 switch (barbarian.getSubclass()){
-                    case BERSERKER -> {
-                        if (barbarian.getChar().getVersion().equals(VERSION_2014)) {
-                            barbarian.addFeatures(INTIMIDATING_PRESENCE);
-                        } else {
-                            barbarian.addFeatures(RETALIATION);
-                        }
-                    }
+                    case BERSERKER -> barbarian.addFeatures(INTIMIDATING_PRESENCE);
                     case TOTEM_WARRIOR -> barbarian.addFeatures(SPIRIT_WALKER);
-                    case WILD_HEART -> barbarian.addFeatures(NATURE_SPEAKER);
-                    case WORLD_TREE -> barbarian.addFeatures(BATTERING_ROOTS);
-                    case ZEALOT -> barbarian.addFeatures(ZEALOUS_PRESENCE);
-                }
-                if (barbarian.getChar().getVersion().equals(VERSION_2024)){
-                    barbarian.setWeaponMastery(4);
                 }
             }
             case 11 -> barbarian.addFeatures(RELENTLESS_RAGE);
@@ -181,22 +141,12 @@ public class GameClassService {
             }
             case 13 -> {
                 barbarian.setProfBonus(5);
-                if (barbarian.getChar().getVersion().equals(VERSION_2014)){
-                    barbarian.addFeatureAtIndex(BRUTAL_CRITICAL_2, barbarian.getFeatures().indexOf(BRUTAL_CRITICAL_1));
-                    barbarian.removeFeature(BRUTAL_CRITICAL_1);
-                } else {
-                    barbarian.addFeatureAtIndex(IMPROVED_BRUTAL_STRIKE_1, barbarian.getFeatures().indexOf(BRUTAL_STRIKE)+1);
-                }
+                barbarian.addFeatureAtIndex(BRUTAL_CRITICAL_2, barbarian.getFeatures().indexOf(BRUTAL_CRITICAL_1));
+                barbarian.removeFeature(BRUTAL_CRITICAL_1);
             }
             case 14 -> {
                 switch (barbarian.getSubclass()){
-                    case BERSERKER -> {
-                        if (barbarian.getChar().getVersion().equals(VERSION_2014)) {
-                            barbarian.addFeatures(RETALIATION);
-                        } else {
-                            barbarian.addFeatures(INTIMIDATING_PRESENCE);
-                        }
-                    }
+                    case BERSERKER -> barbarian.addFeatures(RETALIATION);
                     case TOTEM_WARRIOR -> {
                         barbarian.addFeatures(TOTEMIC_ATTUNEMENT);
                         Choice choice = new Choice();
@@ -204,15 +154,6 @@ public class GameClassService {
                         choice.setAmount(1);
                         choice.addOptions(BEAR,EAGLE,WOLF);
                     }
-                    case WILD_HEART -> {
-                        barbarian.addFeatures(POWER_OF_THE_WILDS);
-                        Choice choice = new Choice();
-                        choice.setName(ANIMAL_POWER);
-                        choice.setAmount(1);
-                        choice.addOptions(FALCON,LION,RAM);
-                    }
-                    case WORLD_TREE -> barbarian.addFeatures(TRAVEL_ALONG_THE_TREE);
-                    case ZEALOT -> barbarian.addFeatures(RAGE_OF_THE_GODS);
                 }
             }
             case 15 -> {
@@ -225,28 +166,13 @@ public class GameClassService {
             }
             case 17 -> {
                 barbarian.setProfBonus(6);
-                if (barbarian.getChar().getVersion().equals(VERSION_2014)) {
-                    barbarian.addFeatureAtIndex(BRUTAL_CRITICAL_3, barbarian.getFeatures().indexOf(BRUTAL_CRITICAL_2));
-                    barbarian.removeFeature(BRUTAL_CRITICAL_2);
-                } else {
-                    barbarian.addFeatureAtIndex(IMPROVED_BRUTAL_STRIKE_2, barbarian.getFeatures().indexOf(IMPROVED_BRUTAL_STRIKE_1)+1);
-                }
+                barbarian.addFeatureAtIndex(BRUTAL_CRITICAL_3, barbarian.getFeatures().indexOf(BRUTAL_CRITICAL_2));
+                barbarian.removeFeature(BRUTAL_CRITICAL_2);
                 barbarian.setAmountRages(6);
             }
             case 18 -> barbarian.addFeatures(INDOMITABLE_MIGHT);
-            case 19 -> {
-                if (barbarian.getChar().getVersion().equals(VERSION_2014)){
-                    abilitySkillImprovement(barbarian);
-                } else {
-                    barbarian.addFeatures(EPIC_BOON);
-                }
-            }
-            case 20 -> {
-                barbarian.addFeatures(PRIMAL_CHAMPION);
-                if (barbarian.getChar().getVersion().equals(VERSION_2014)){
-                    barbarian.setAmountRages(7);
-                }
-            }
+            case 19 -> abilitySkillImprovement(barbarian);
+            case 20 -> barbarian.addFeatures(PRIMAL_CHAMPION);
         }
     }
 
@@ -280,11 +206,7 @@ public class GameClassService {
             }
             case 2 -> {
                 bard.addFeatures(JACK_OF_ALL_TRADES);
-                if (bard.getChar().getVersion().equals(VERSION_2014)){
-                    bard.addFeatures(SONG_OF_REST_D6);
-                } else {
-                   expertise(bard, 2);
-                }
+                bard.addFeatures(SONG_OF_REST_D6);
                 bard.addSpellSlot(1,3);
                 bard.setAmountPreparedSpells(5);
             }
@@ -292,12 +214,8 @@ public class GameClassService {
                 Choice choice = new Choice();
                 choice.setName(BARD + " " + SUBCLASS);
                 choice.setAmount(1);
-                if (bard.getChar().getVersion().equals(VERSION_2014)){
-                    expertise(bard, 2);
-                    choice.addOptions(LORE, VALOR);
-                } else {
-                    choice.addOptions(DANCE,GLAMOUR,LORE,VALOR);
-                }
+                expertise(bard, 2);
+                choice.addOptions(LORE, VALOR);
                 bard.addChoose(choice);
                 bard.addSpellSlot(1,4);
                 bard.addSpellSlot(2,2);
@@ -315,36 +233,18 @@ public class GameClassService {
                 bard.addFeatureAtIndex(BARDIC_INSPIRATION_D8,bard.getFeatures().indexOf(BARDIC_INSPIRATION_D6));
                 bard.removeFeature(BARDIC_INSPIRATION_D6);
                 bard.addFeatures(FONT_OF_INSPIRATION);
-                if (bard.getChar().getVersion().equals(VERSION_2014)){
-                    bard.setAmountPreparedSpells(8);
-                } else {
-                    bard.setAmountPreparedSpells(9);
-                }
+                bard.setAmountPreparedSpells(8);
             }
             case 6 -> {
-                if (bard.getChar().getVersion().equals(VERSION_2014)){
-                    bard.addFeatures(COUNTERCHARM);
-                    bard.setAmountPreparedSpells(9);
-                } else {
-                    bard.setAmountPreparedSpells(10);
-                }
+                bard.addFeatures(COUNTERCHARM);
+                bard.setAmountPreparedSpells(9);
                 bard.addSpellSlot(3,3);
                 switch (bard.getSubclass()) {
-                    case DANCE -> bard.addFeatures(INSPIRING_MOVEMENT, TANDEM_FOOTWORK);
-                    case GLAMOUR -> bard.addFeatures(MANTLE_OF_MAJESTY);
                     case LORE -> {
-                        if (bard.getChar().getVersion().equals(VERSION_2014)){
-                            Choice choice = new Choice();
-                            choice.setName(ADDITIONAL_MAGICAL_SECRETS);
-                            choice.setAmount(2);
-                            choice.addOptions();
-                        }
-                        bard.addFeatures(MAGICAL_DISCOVERIES);
-                        bard.setMagicalDiscoveries(true);
                         Choice choice = new Choice();
-                        choice.setName(MAGICAL_DISCOVERIES);
+                        choice.setName(ADDITIONAL_MAGICAL_SECRETS);
                         choice.setAmount(2);
-                        bard.addChoose(choice);
+                        choice.addOptions();
                     }
                     case VALOR -> bard.addFeatures(EXTRA_ATTACK);
                 }
@@ -394,14 +294,7 @@ public class GameClassService {
         }
     }
 
-    private void magicalDiscovery(Bard bard) {
-        Choice choice = new Choice();
-        choice.setName(MAGICAL_DISCOVERIES);
-        choice.setAmount(1);
-        bard.addChoose(choice);
-    }
-
-    public void updateCleric(Cleric cleric) {
+    private void updateCleric(Cleric cleric) {
         switch (cleric.getLevel()) {
             case 0 -> {}
             case 1 -> {}
@@ -427,7 +320,7 @@ public class GameClassService {
         }
     }
 
-    public void updateDruid(Druid druid) {
+    private void updateDruid(Druid druid) {
         switch (druid.getLevel()) {
             case 0 -> {}
             case 1 -> {}
@@ -453,7 +346,7 @@ public class GameClassService {
         }
     }
 
-    public void updateFighter(Fighter fighter) {
+    private void updateFighter(Fighter fighter) {
         switch (fighter.getLevel()) {
             case 0 -> {}
             case 1 -> {}
@@ -479,7 +372,7 @@ public class GameClassService {
         }
     }
 
-    public void updateMonk(Monk monk) {
+    private void updateMonk(Monk monk) {
         switch (monk.getLevel()) {
             case 0 -> {}
             case 1 -> {}
@@ -505,7 +398,7 @@ public class GameClassService {
         }
     }
 
-    public void updatePaladin(Paladin paladin) {
+    private void updatePaladin(Paladin paladin) {
         switch (paladin.getLevel()) {
             case 0 -> {}
             case 1 -> {}
@@ -531,7 +424,7 @@ public class GameClassService {
         }
     }
 
-    public void updateRanger(Ranger ranger) {
+    private void updateRanger(Ranger ranger) {
         switch (ranger.getLevel()) {
             case 0 -> {}
             case 1 -> {}
@@ -557,7 +450,7 @@ public class GameClassService {
         }
     }
 
-    public void updateRouge(Rogue rogue) {
+    private void updateRouge(Rogue rogue) {
         switch (rogue.getLevel()) {
             case 0 -> {}
             case 1 -> {}
@@ -583,7 +476,7 @@ public class GameClassService {
         }
     }
 
-    public void updateSorcerer(Sorcerer sorcerer) {
+    private void updateSorcerer(Sorcerer sorcerer) {
         switch (sorcerer.getLevel()) {
             case 0 -> {}
             case 1 -> {}
@@ -609,7 +502,7 @@ public class GameClassService {
         }
     }
 
-    public void updateWarlock(Warlock warlock) {
+    private void updateWarlock(Warlock warlock) {
         switch (warlock.getLevel()) {
             case 0 -> {}
             case 1 -> {}
@@ -635,7 +528,7 @@ public class GameClassService {
         }
     }
 
-    public void updateWizard(Wizard wizard) {
+    private void updateWizard(Wizard wizard) {
         switch (wizard.getLevel()) {
             case 0 -> {}
             case 1 -> {}

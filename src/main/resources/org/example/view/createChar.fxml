@@ -140,13 +140,6 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Label layoutX="106.0" layoutY="369.0" text="Version:" />
-            <MenuButton fx:id="select_version" layoutX="184.0" layoutY="365.0" mnemonicParsing="false" prefWidth="150.0" text="Select Version">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="2014" />
-                  <MenuItem mnemonicParsing="false" text="2024" />
-               </items>
-            </MenuButton>
          </children>
     </AnchorPane>
   </children>

@@ -1,9 +1,5 @@
 package org.example;
 
-import com.sun.javafx.scene.NodeHelper;
-
-import javax.swing.text.AbstractDocument;
-
 public class Constants {
 
     // SCREEN TITLES
@@ -13,10 +9,6 @@ public class Constants {
     // WINDOWS SPECIFIC STUFF
     public static final int WIN_WIDTH_DIFF = 16;
     public static final int WIN_HEIGHT_DIFF = 39;
-
-    // VERSION
-    public static final String VERSION_2014 = "2014";
-    public static final String VERSION_2024 = "2024";
 
     // CLASS NAMES
     public static final String BARBARIAN = "Barbarian";
@@ -35,9 +27,10 @@ public class Constants {
     // BARBARIAN SUBCLASSES
     public static final String BERSERKER = "Path of the Berserker";
     public static final String TOTEM_WARRIOR = "Path of the Totem Warrior";
-    public static final String WILD_HEART = "Path of the Wild Heart";
-    public static final String WORLD_TREE = "Path of the World Tree";
-    public static final String ZEALOT = "Path of the Zealot";
+
+    // BARD SUBCLASSES
+    public static final String LORE = "College of Lore";
+    public static final String VALOR = "College of Valor";
 
     // SPECIES NAMES
 
@@ -70,29 +63,22 @@ public class Constants {
     public static final String SUBCLASS = "Subclass";
     public static final String ABILITY_SCORE_IMPROVEMENT = "Ability Score Improvement";
     public static final String SUBCLASS_FEATURE = "Subclass Feature";
-    public static final String EPIC_BOON = "Epic Boon";
 
     // BARBARIAN FEATURES
     public static final String BRUTAL_CRITICAL_1 = "Brutal Critical (1 die)";
     public static final String BRUTAL_CRITICAL_2 = "Brutal Critical (2 dice)";
     public static final String BRUTAL_CRITICAL_3 = "Brutal Critical (3 dice)";
-    public static final String BRUTAL_STRIKE = "Brutal Strike";
     public static final String DANGER_SENSE = "Danger Sense";
     public static final String EXTRA_ATTACK = "Extra Attack"; //also used in bard subclass college of valor
     public static final String FAST_MOVEMENT = "Fast Movement";
     public static final String FERAL_INSTINCT = "Feral Instinct";
-    public static final String IMPROVED_BRUTAL_STRIKE_1 = "Improved Brutal Strike 1";
-    public static final String IMPROVED_BRUTAL_STRIKE_2 = "Improved Brutal Strike 1";
     public static final String INDOMITABLE_MIGHT = "Indomitable Might";
-    public static final String INSTINCTIVE_POUNCE = "Instinctive Pounce";
     public static final String PERSISTENT_RAGE = "Persistent Rage";
     public static final String PRIMAL_CHAMPION = "Primal Champion";
-    public static final String PRIMAL_KNOWLEDGE = "Primal Knowledge";
     public static final String RAGE = "Rage";
     public static final String RECKLESS_ATTACK = "Reckless Attack";
     public static final String RELENTLESS_RAGE = "Relentless Rage";
     public static final String UNARMORED_DEFENCE = "Unarmored Defence";
-    public static final String WEAPON_MASTERY = "Weapon Mastery";
 
     // BARBARIAN SUBCLASS FEATURES
     // PATH OF THE BERSERKER
@@ -108,38 +94,11 @@ public class Constants {
     public static final String SPIRIT_WALKER = "Spirit Walker";
     public static final String TOTEMIC_ATTUNEMENT = "Totemic Attunement";
 
-    // PATH OF THE WILD HEART
-    public static final String ANIMAL_SPEAKER = "Animal Speaker";
-    public static final String RAGE_OF_THE_WILDS = "Rage of the Wilds";
-    public static final String ASPECT_OF_THE_WILDS = "Aspect of the Wilds";
-    public static final String NATURE_SPEAKER = "Nature Speaker";
-    public static final String POWER_OF_THE_WILDS = "Power of the Wilds";
-
     // TOTEM/WILD HEART ANIMALS
     public static final String TOTEM_ANIMAL = "Totem Animal";
-    public static final String ANIMAL_POWER = "Animal Power";
     public static final String BEAR = "Bear";
     public static final String EAGLE = "Eagle";
     public static final String WOLF = "Wolf";
-    public static final String OWL = "Owl";
-    public static final String PANTHER = "Panther";
-    public static final String SALMON = "Salmon";
-    public static final String FALCON = "Falcon";
-    public static final String LION = "Lion";
-    public static final String RAM = "Ram";
-
-    // PATH OF THE WORLD TREE
-    public static final String VITALITY_OF_THE_TREE = "Vitality of the Tree";
-    public static final String BRANCHES_OF_THE_TREE = "Branches of the Tree";
-    public static final String BATTERING_ROOTS = "Battering Roots";
-    public static final String TRAVEL_ALONG_THE_TREE = "Travel Along the Tree";
-
-    // PATH OF THE ZEALOT
-    public static final String DIVINE_FURY = "Divine Fury";
-    public static final String WARRIOR_OF_THE_GODS = "Warrior of the Gods";
-    public static final String FANATICAL_FOCUS = "Fanatical Focus";
-    public static final String ZEALOUS_PRESENCE = "Zealous Presence";
-    public static final String RAGE_OF_THE_GODS = "Rage of the Gods";
 
     // BARD FEATURES
     public static final String BARDIC_INSPIRATION_D6 = "Bardic Inspiration (d6)";
@@ -153,41 +112,20 @@ public class Constants {
     public static final String COUNTERCHARM = "Countercharm";
     public static final String MAGICAL_SECRETS = "Magical Secrets";
     public static final String SUPERIOR_INSPIRATION = "Superior Inspiration";
-    public static final String WORDS_OF_CREATION = "Words of Creation";
     public static final String SONG_OF_REST_D6 = "Song of Rest (d6)";
     public static final String SONG_OF_REST_D8 = "Song of Rest (d8)";
     public static final String SONG_OF_REST_D10 = "Song of Rest (d10)";
     public static final String SONG_OF_REST_D12 = "Song of Rest (d12)";
 
-    // BARD SUBCLASSES
-    public static final String DANCE = "College of Dance";
-    public static final String GLAMOUR = "College of Glamour";
-    public static final String LORE = "College of Lore";
-    public static final String VALOR = "College of Valor";
-
-    // COLLEGE OF DANCE
-    public static final String DAZZLING_FOOTWORK = "Dazzling Footwork";
-    public static final String INSPIRING_MOVEMENT = "Inspiring Movement";
-    public static final String TANDEM_FOOTWORK = "Tandem Footwork";
-    public static final String LEADING_EVASION = "Leading Evasion";
-
-    // COLLEGE OF GLAMOUR
-    public static final String BEGUILING_MAGIC = "Beguiling Magic";
-    public static final String MANTLE_OF_INSPIRATION = "Mantle of Inspiration";
-    public static final String MANTLE_OF_MAJESTY = "Mantle of Majesty";
-    public static final String UNBREAKABLE_MAJESTY = "Unbreakable Majesty";
-
     // COLLEGE OF LORE
     public static final String CUTTING_WORDS = "Cutting Words";
     public static final String ADDITIONAL_MAGICAL_SECRETS = "Additional Magical Secrets";
     public static final String PEERLESS_SKILL = "Peerless Skill";
-    public static final String MAGICAL_DISCOVERIES = "Magical Discoveries";
 
     // COLLEGE OF VALOR
     public static final String COMBAT_INSPIRATION = "Combat Inspiration";
     // extra attack in barbarian features
     public static final String BATTLE_MAGIC = "Battle Magic";
-    public static final String MARTIAL_TRAINING = "Martial Training";
 
     // SKILLS
     public static final String ACROBATICS = "Acrobatics";
@@ -251,7 +189,6 @@ public class Constants {
     public static final String JAVELIN = "Javelin";
     public static final String LIGHT_HAMMER = "Light Hammer";
     public static final String MACE = "Mace";
-    public static final String PSYCHIC_BLADE = "Psychic Blade";
     public static final String QUARTERSTAFF = "Quarterstaff";
     public static final String SICKLE = "Sickle";
     public static final String SPEAR = "Spear";
@@ -289,7 +226,6 @@ public class Constants {
     public static final String CROSSBOW_HAND = "Crossbow (hand)";
     public static final String CROSSBOW_HEAVY = "Crossbow (heavy)";
     public static final String LONGBOW = "Longbow";
-    public static final String MUSKET = "Musket";
     public static final String NET = "Net";
 
     // ARMOR PROPERTY
@@ -330,7 +266,6 @@ public class Constants {
     public static final String MAGE_HAND = "Mage Hand";
     public static final String MENDING = "Mending";
     public static final String MESSAGE = "Message";
-    public static final String MIND_SILVER = "Mind Silver";
     public static final String MINOR_ILLUSION = "Minor Illusion";
     public static final String POISON_SPRAY = "Poison Spray";
     public static final String PRESTIDIGITATION = "Prestidigitation";
@@ -340,56 +275,31 @@ public class Constants {
     public static final String SACRED_FLAME = "Sacred Flame";
     public static final String SHILLELAGH = "Shillelagh";
     public static final String SHOCKING_GRASP = "Shocking Grasp";
-    public static final String SORCEROUS_BURST = "Sorcerous Burst";
     public static final String SPARE_THE_DYING = "Spare the Dying";
-    public static final String STARRY_WHIP = "Starry Whip";
     public static final String THAUMATURGY = "Thaumaturgy";
     public static final String THORN_WHIP = "Thorn Whip";
-    public static final String THUNDERCLAP = "Thunderclap";
-    public static final String TOLL_THE_DEAD = "Toll the Dead";
     public static final String TRUE_STRIKE = "True Strike";
     public static final String VICIOUS_MOCKERY = "Vicious Mockery";
-    public static final String WORLD_OF_RADIANCE = "World of Radiance";
 
-    public static final String[] BARD_CANTRIPS_14 = {BLADE_WARD, DANCING_LIGHTS, FRIENDS, LIGHT, MAGE_HAND, MENDING,
+    public static final String[] BARD_CANTRIPS = {BLADE_WARD, DANCING_LIGHTS, FRIENDS, LIGHT, MAGE_HAND, MENDING,
             MESSAGE, MINOR_ILLUSION, PRESTIDIGITATION, TRUE_STRIKE, VICIOUS_MOCKERY};
 
-    public static final String[] BARD_CANTRIPS_24 = {BLADE_WARD, DANCING_LIGHTS, FRIENDS, LIGHT, MAGE_HAND, MENDING,
-            MESSAGE, MINOR_ILLUSION, PRESTIDIGITATION, STARRY_WHIP, THUNDERCLAP, TRUE_STRIKE, VICIOUS_MOCKERY};
-
-    public static final String[] CLERIC_CANTRIPS_14 = {GUIDANCE, LIGHT, MENDING, RESISTANCE, SACRED_FLAME,
+    public static final String[] CLERIC_CANTRIPS = {GUIDANCE, LIGHT, MENDING, RESISTANCE, SACRED_FLAME,
             SPARE_THE_DYING, THAUMATURGY};
 
-    public static final String[] CLERIC_CANTRIPS_24 = {GUIDANCE, LIGHT, MENDING, RESISTANCE, SACRED_FLAME,
-            SPARE_THE_DYING, THAUMATURGY, TOLL_THE_DEAD, WORLD_OF_RADIANCE};
-
-    public static final String[] DRUID_CANTRIPS_14 = {DRUIDCRAFT, GUIDANCE, MENDING, POISON_SPRAY, PRODUCE_FLAME,
+    public static final String[] DRUID_CANTRIPS = {DRUIDCRAFT, GUIDANCE, MENDING, POISON_SPRAY, PRODUCE_FLAME,
             RESISTANCE, SHILLELAGH, THORN_WHIP};
 
-    public static final String[] DRUID_CANTRIPS_24 = {DRUIDCRAFT, ELEMENTALISM, GUIDANCE, MENDING, MESSAGE,
-            POISON_SPRAY, PRODUCE_FLAME, RESISTANCE, SHILLELAGH, SPARE_THE_DYING, STARRY_WHIP, THORN_WHIP, THUNDERCLAP};
-
-    public static final String[] SORCERER_CANTRIPS_14 = {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS,
+    public static final String[] SORCERER_CANTRIPS = {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS,
             FIRE_BOLT, FRIENDS, LIGHT, MAGE_HAND, MENDING, MESSAGE, MINOR_ILLUSION, POISON_SPRAY, PRESTIDIGITATION,
             RAY_OF_FROST, SHOCKING_GRASP, TRUE_STRIKE};
 
-    public static final String[] SORCERER_CANTRIPS_24 = {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS,
-            ELEMENTALISM, FIRE_BOLT, FRIENDS, LIGHT, MAGE_HAND, MENDING, MESSAGE, MIND_SILVER, MINOR_ILLUSION,
-            POISON_SPRAY, PRESTIDIGITATION, RAY_OF_FROST, SHOCKING_GRASP, SORCEROUS_BURST, THUNDERCLAP, TRUE_STRIKE};
-
-    public static final String[] WARLOCK_CANTRIPS_14 = {BLADE_WARD, CHILL_TOUCH, ELDRITCH_BLAST, FRIENDS, MAGE_HAND,
+    public static final String[] WARLOCK_CANTRIPS = {BLADE_WARD, CHILL_TOUCH, ELDRITCH_BLAST, FRIENDS, MAGE_HAND,
             MINOR_ILLUSION, POISON_SPRAY, PRESTIDIGITATION, TRUE_STRIKE};
 
-    public static final String[] WARLOCK_CANTRIPS_24 = {BLADE_WARD, CHILL_TOUCH, ELDRITCH_BLAST, FRIENDS, MAGE_HAND,
-            MIND_SILVER, MINOR_ILLUSION, POISON_SPRAY, PRESTIDIGITATION, THUNDERCLAP, TOLL_THE_DEAD, TRUE_STRIKE};
-
-    public static final String[] WIZARD_CANTRIPS_14 = {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS, FIRE_BOLT,
+    public static final String[] WIZARD_CANTRIPS= {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS, FIRE_BOLT,
             FRIENDS, LIGHT, MAGE_HAND, MENDING, MESSAGE, MINOR_ILLUSION, POISON_SPRAY, PRESTIDIGITATION, RAY_OF_FROST,
             SHOCKING_GRASP, TRUE_STRIKE};
-
-    public static final String[] WIZARD_CANTRIPS_24 = {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS,
-            ELEMENTALISM, FIRE_BOLT, FRIENDS, LIGHT, MAGE_HAND, MENDING, MESSAGE, MIND_SILVER, MINOR_ILLUSION,
-            POISON_SPRAY, RAY_OF_FROST, SHOCKING_GRASP, THUNDERCLAP, TOLL_THE_DEAD, TRUE_STRIKE};
 
     // LEVEL 1
     public static final String ALARM = "Alarm";

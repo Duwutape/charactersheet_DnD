@@ -2,7 +2,6 @@ package org.example.model;
 
 public class Char {
     private String name;
-    private String version;
     private GameClass gameClass;
     private Species species;
     private int level;
@@ -13,14 +12,6 @@ public class Char {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getVersion() {
-        return version;
-    }
-
-    public void setVersion(String version) {
-        this.version = version;
     }
 
     public GameClass getGameClass() {
