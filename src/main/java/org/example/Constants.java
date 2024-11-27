@@ -297,7 +297,7 @@ public class Constants {
     public static final String[] WARLOCK_CANTRIPS = {BLADE_WARD, CHILL_TOUCH, ELDRITCH_BLAST, FRIENDS, MAGE_HAND,
             MINOR_ILLUSION, POISON_SPRAY, PRESTIDIGITATION, TRUE_STRIKE};
 
-    public static final String[] WIZARD_CANTRIPS= {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS, FIRE_BOLT,
+    public static final String[] WIZARD_CANTRIPS = {ACID_SPLASH, BLADE_WARD, CHILL_TOUCH, DANCING_LIGHTS, FIRE_BOLT,
             FRIENDS, LIGHT, MAGE_HAND, MENDING, MESSAGE, MINOR_ILLUSION, POISON_SPRAY, PRESTIDIGITATION, RAY_OF_FROST,
             SHOCKING_GRASP, TRUE_STRIKE};
 
@@ -330,40 +330,47 @@ public class Constants {
     public static final String FALSE_LIFE = "False Life";
     public static final String FEATHER_FALL = "Feather Fall";
     public static final String FIND_FAMILIAR = "Find Familiar";
-    public static final String  FOG_CLOUD="Fog Cloud";
-    public static final String  GOODBERRY="Goodberry";
-    public static final String  GREASE="Grease";
-    public static final String  GUIDING_BOLT="Guiding Bolt";
-    public static final String  HAIL_OF_THRONES="Hail of Thrones";
-    public static final String  HEALING_WORD="Healing Word";
-    public static final String  HELLISH_REBUKE="Hellish Rebuke";
-    public static final String  HEROISM="Heroism";
-    public static final String  HEX="Hex";
-    public static final String  HUNTERS_MASK="Hunter's Mask";
-    public static final String  IDENTIFY="Identify";
-    public static final String  ILLUSORY_SCRIPT="Illusory Script";
-    public static final String  INFLICT_WOUNDS="Inflict Wounds";
-    public static final String  JUMP="Jump";
-    public static final String  LONGSTRIDER="Longstrider";
-    public static final String  MAGE_ARMOR="Mage Armor";
-    public static final String  MAGIC_MISSILE="Magic Missile";
-    public static final String  PROTECTION_FROM_EVIL_AND_GOOD="Protection from Evil and Good";
-    public static final String  PURIFY_FOOD_AND_DRINK="Purify Food and Drink";
-    public static final String  RAY_OF_SICKNESS="Ray of Sickness";
-    public static final String  SANCTUARY="Sanctuary";
-    public static final String  SEARING_SMITE="Searing Smite";
+    public static final String FOG_CLOUD = "Fog Cloud";
+    public static final String GOODBERRY = "Goodberry";
+    public static final String GREASE = "Grease";
+    public static final String GUIDING_BOLT = "Guiding Bolt";
+    public static final String HAIL_OF_THRONES = "Hail of Thrones";
+    public static final String HEALING_WORD = "Healing Word";
+    public static final String HELLISH_REBUKE = "Hellish Rebuke";
+    public static final String HEROISM = "Heroism";
+    public static final String HEX = "Hex";
+    public static final String HUNTERS_MASK = "Hunter's Mask";
+    public static final String IDENTIFY = "Identify";
+    public static final String ILLUSORY_SCRIPT = "Illusory Script";
+    public static final String INFLICT_WOUNDS = "Inflict Wounds";
+    public static final String JUMP = "Jump";
+    public static final String LONGSTRIDER = "Longstrider";
+    public static final String MAGE_ARMOR = "Mage Armor";
+    public static final String MAGIC_MISSILE = "Magic Missile";
+    public static final String PROTECTION_FROM_EVIL_AND_GOOD = "Protection from Evil and Good";
+    public static final String PURIFY_FOOD_AND_DRINK = "Purify Food and Drink";
+    public static final String RAY_OF_SICKNESS = "Ray of Sickness";
+    public static final String SANCTUARY = "Sanctuary";
+    public static final String SEARING_SMITE = "Searing Smite";
     // shield in ARMOR TYPES
-    public static final String  SHIELD_OF_FAITH="Shield of Faith";
-    public static final String  SILENT_IMAGE="Silent Image";
-    public static final String  SLEEP="Sleep";
-    public static final String  SPEAK_WITH_ANIMALS="Speak with Animals";
-    public static final String  TASHAS_HIDEOUS_LAUGHTER="Tasha's Hideous Laughter";
-    public static final String  TENSERS_FLOATING_DISK="Tenser's Floating Disk";
-    public static final String  THUNDEROUS_SMITE="Thunderous Smite";
-    public static final String  THUNDERWAVE="Thunderwave";
-    public static final String  UNSEEN_SERVANT="Unseen Servant";
-    public static final String  WITCH_BOLT="Witch Bolt";
-    public static final String  WRATHFUL_SMITE="Wrathful Smite";
+    public static final String SHIELD_OF_FAITH = "Shield of Faith";
+    public static final String SILENT_IMAGE = "Silent Image";
+    public static final String SLEEP = "Sleep";
+    public static final String SPEAK_WITH_ANIMALS = "Speak with Animals";
+    public static final String TASHAS_HIDEOUS_LAUGHTER = "Tasha's Hideous Laughter";
+    public static final String TENSERS_FLOATING_DISK = "Tenser's Floating Disk";
+    public static final String THUNDEROUS_SMITE = "Thunderous Smite";
+    public static final String THUNDERWAVE = "Thunderwave";
+    public static final String UNSEEN_SERVANT = "Unseen Servant";
+    public static final String WITCH_BOLT = "Witch Bolt";
+    public static final String WRATHFUL_SMITE = "Wrathful Smite";
 
-
+    public static final String[] BARD_SPELLS_LVL_1 = {ANIMAL_FRIENDSHIP,BANE,CHARM_PERSON,COLOR_SPRAY,COMMAND,COMPREHEND_LANGUAGES,CURE_WOUNDS,DETECT_MAGIC,DISGUISE_SELF,DISSONANT_WHISPERS,FAERIE_FIRE,FEATHER_FALL,HEALING_WORD,HEROISM,IDENTIFY,ILLUSORY_SCRIPT,LONGSTRIDER,SILENT_IMAGE,SLEEP,SPEAK_WITH_ANIMALS,TASHAS_HIDEOUS_LAUGHTER,THUNDERWAVE,UNSEEN_SERVANT};
+    public static final String[] CLERIC_SPELLS_LVL_1 = {BANE,BLESS,COMMAND,CREATE_OR_DESTROY_WATER,CURE_WOUNDS,DETECT_EVIL_AND_GOOD,DETECT_MAGIC,DETECT_POISON_AND_DISEASE,GUIDING_BOLT,HEALING_WORD,INFLICT_WOUNDS,PROTECTION_FROM_EVIL_AND_GOOD,PURIFY_FOOD_AND_DRINK,SANCTUARY,SHIELD_OF_FAITH};
+    public static final String[] DRUID_SPELLS_LVL_1 = {ANIMAL_FRIENDSHIP,CHARM_PERSON,CREATE_OR_DESTROY_WATER,CURE_WOUNDS,DETECT_MAGIC,DETECT_POISON_AND_DISEASE,ENTANGLE,FAERIE_FIRE,FOG_CLOUD,GOODBERRY,HEALING_WORD,JUMP,LONGSTRIDER,PROTECTION_FROM_EVIL_AND_GOOD,PURIFY_FOOD_AND_DRINK,SPEAK_WITH_ANIMALS,THUNDERWAVE};
+    public static final String[] PALADIN_SPELLS_LVL_1 = {BLESS,COMMAND,COMPELLED_DUEL,CURE_WOUNDS,DETECT_EVIL_AND_GOOD,DETECT_MAGIC,DETECT_POISON_AND_DISEASE,DIVINE_FAVOR,HEROISM,PROTECTION_FROM_EVIL_AND_GOOD,PURIFY_FOOD_AND_DRINK,SEARING_SMITE,SHIELD_OF_FAITH,THUNDEROUS_SMITE,WRATHFUL_SMITE};
+    public static final String[] RANGER_SPELLS_LVL_1 = {ALARM,ANIMAL_FRIENDSHIP,CURE_WOUNDS,DETECT_MAGIC,DETECT_POISON_AND_DISEASE,ENSNARING_STRIKE,ENTANGLE,FOG_CLOUD,GOODBERRY,HAIL_OF_THRONES,HUNTERS_MASK,JUMP,LONGSTRIDER,SEARING_SMITE,SPEAK_WITH_ANIMALS};
+    public static final String[] SORCERER_SPELLS_LVL_1 = {BURNING_HANDS,CHARM_PERSON,CHROMATIC_ORB,COLOR_SPRAY,COMPREHEND_LANGUAGES,DETECT_MAGIC,DISGUISE_SELF,EXPEDITIOUS_RETREAT,FALSE_LIFE,FEATHER_FALL,FOG_CLOUD,GREASE,JUMP,MAGE_ARMOR,MAGIC_MISSILE,RAY_OF_SICKNESS,SHIELD,SILENT_IMAGE,SLEEP,THUNDERWAVE,WITCH_BOLT};
+    public static final String[] WARLOCK_SPELLS_LVL_1 = {ARMOR_OF_AGATHYS,ARMS_OF_HADAR,CHARM_PERSON,COMPREHEND_LANGUAGES,EXPEDITIOUS_RETREAT,HELLISH_REBUKE,HEX,ILLUSORY_SCRIPT,PROTECTION_FROM_EVIL_AND_GOOD,UNSEEN_SERVANT,WITCH_BOLT};
+    public static final String[] WIZARD_SPELLS_LVL_1 = {ALARM,BURNING_HANDS,CHARM_PERSON,CHROMATIC_ORB,COLOR_SPRAY,COMPREHEND_LANGUAGES,DETECT_MAGIC,DISGUISE_SELF,EXPEDITIOUS_RETREAT,FALSE_LIFE,FEATHER_FALL,FIND_FAMILIAR,FOG_CLOUD,GREASE,IDENTIFY,ILLUSORY_SCRIPT,JUMP,LONGSTRIDER,MAGE_ARMOR,MAGIC_MISSILE,PROTECTION_FROM_EVIL_AND_GOOD,RAY_OF_SICKNESS,SHIELD,SILENT_IMAGE,SLEEP,TASHAS_HIDEOUS_LAUGHTER,TENSERS_FLOATING_DISK,THUNDERWAVE,UNSEEN_SERVANT,WITCH_BOLT};
 }

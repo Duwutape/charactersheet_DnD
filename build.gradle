@@ -34,7 +34,7 @@ javafx {
 
 shadowJar {
     archiveClassifier = project.findProperty('platform') ?: 'all'
-    archiveBaseName.set('Charsheet')
+    archiveBaseName.set('CharSheet')
     archiveClassifier.set('')
     archiveVersion.set('1')
 }
