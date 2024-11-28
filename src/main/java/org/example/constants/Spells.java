@@ -3,6 +3,8 @@ package org.example.constants;
 import com.sun.javafx.scene.control.TabObservableList;
 
 import javax.swing.border.SoftBevelBorder;
+import java.awt.image.DataBuffer;
+import java.util.concurrent.SynchronousQueue;
 
 public class Spells {
 
@@ -535,4 +537,45 @@ public class Spells {
             CREATE_UNDEAD, DISINTEGRATE, DRAWMIJS_INSTANT_SUMMONS, EYEBITE, FLESH_TO_STONE, GLOBE_OF_INVULNERABILITY,
             GUARDS_AND_WARDS, MAGIC_JAR, MASS_SUGGESTION, MOVE_EARTH, OTILUKES_FREEZING_SPHERE, OTTOS_IRRESISTIBLE_DANCE,
             PROGRAMMED_ILLUSION, SUNBEAM, TRUE_SEEING, WALL_OF_ICE};
+
+    // LEVEL 7
+    public static final String CONJURE_CELESTIAL = "Conjure Celestial";
+    public static final String DELAYED_BLAST_FIREBALL = "Delayed Blast Fireball";
+    public static final String DIVINE_WORD = "Divine Word";
+    public static final String ETHEREALNESS = "Etherealness";
+    public static final String FINGER_OF_DEATH = "Fomder of Death";
+    public static final String FIRE_STORM = "Fire Storm";
+    public static final String FORCECAGE = "Forcecage";
+    public static final String MIRAGE_ARCANE = "Mirage Arcane";
+    public static final String MORDENKAINENS_MAGNIFICENT_MANSION = "Mordenkainen's Magnificent Mansion";
+    public static final String MORDENKAINENS_SWORD = "Mordenkainen's Sword";
+    public static final String PLANE_SHIFT = "Plane Shift";
+    public static final String PRISMATIC_SPRAY = "Prismatic Spray";
+    public static final String PROJECT_IMAGE = "Project Image";
+    public static final String REGENERATE = "Regenerate";
+    public static final String RESURRECTION = "Resurrection";
+    public static final String REVERSE_GRAVITY = "Reverse Gravity";
+    public static final String SEQUESTER = "Sequester";
+    public static final String SIMULACRUM = "Simulacrum";
+    public static final String SYMBOL = "Symbol";
+    public static final String TELEPORT = "Teleport";
+
+    public static final String[] BARD_SPELLS_LVL_7 = {ETHEREALNESS, FORCECAGE, MIRAGE_ARCANE,
+            MORDENKAINENS_MAGNIFICENT_MANSION, MORDENKAINENS_SWORD, PRISMATIC_SPRAY, PROJECT_IMAGE, REGENERATE,
+            RESURRECTION, SYMBOL, TELEPORT};
+
+    public static final String[] CLERIC_SPELLS_LVL_7 = {CONJURE_CELESTIAL, DIVINE_WORD, ETHEREALNESS, FIRE_STORM,
+            PLANE_SHIFT, REGENERATE, RESURRECTION, SYMBOL};
+
+    public static final String[] DRUID_SPELLS_LVL_7 = {FIRE_STORM, MIRAGE_ARCANE, PLANE_SHIFT, REGENERATE,
+            REVERSE_GRAVITY, SYMBOL};
+
+    public static final String[] SORCERER_SPELLS_LVL_7 = {DELAYED_BLAST_FIREBALL, ETHEREALNESS, FINGER_OF_DEATH,
+            FIRE_STORM, PLANE_SHIFT, PRISMATIC_SPRAY, REVERSE_GRAVITY, TELEPORT};
+
+    public static final String[] WARLOCK_SPELLS_LVL_7 = {ETHEREALNESS, FINGER_OF_DEATH, FORCECAGE, PLANE_SHIFT};
+
+    public static final String[] WIZARD_SPELLS_LVL_7 = {DELAYED_BLAST_FIREBALL, ETHEREALNESS, FINGER_OF_DEATH, FORCECAGE,
+            MIRAGE_ARCANE, MORDENKAINENS_MAGNIFICENT_MANSION, MORDENKAINENS_SWORD, PLANE_SHIFT, PRISMATIC_SPRAY,
+            PROJECT_IMAGE, REVERSE_GRAVITY, SEQUESTER, SIMULACRUM, SYMBOL, TELEPORT};
 }
