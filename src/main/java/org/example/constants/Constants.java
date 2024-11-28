@@ -159,7 +159,7 @@ public class Constants {
     public static final String AMMUNITION = "Ammunition";
     public static final String FINESSE = "Finesse";
     public static final String HEAVY = "Heavy";
-    public static final String LIGHT = "Light"; //also used in Spells/Cantrips
+    public static final String LIGHT = "Light";
     public static final String LOADING = "Loading";
     public static final String RANGE = "Range";
     public static final String REACH = "Reach";
@@ -233,7 +233,7 @@ public class Constants {
     public static final String LIGHT_ARMOR = "light armor";
     public static final String MEDIUM_ARMOR = "medium armor";
     public static final String HEAVY_ARMOR = "heavy armor";
-    public static final String SHIELD = "shield"; //also used in SPELLS/LEVEL1
+    public static final String SHIELD = "shield";
 
     // TOOLS
     // MUSICAL INSTRUMENTS

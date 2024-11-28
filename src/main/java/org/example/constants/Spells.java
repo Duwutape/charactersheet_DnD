@@ -404,4 +404,78 @@ public class Spells {
             FIRE_SHIELD, GREATER_INVISIBILITY, HALLUCINATORY_TERRAIN, ICE_STORM, LEOMUNDS_SECRET_CHEST, LOCATE_CREATURE,
             MORDENKAINENS_FAITHFUL_HOUND, MORDEKAINNENS_PRIVATE_SANCTUM, OTILUKES_RESILIENT_SPARE, PHANTASMAL_KILLER,
             POLYMORPH, STONE_SHAPE, STONESKIN, WALL_OF_FIRE};
+
+    // LEVEL 5
+    public static final String ANIMATE_OBJECTS = "Animate Objects";
+    public static final String ANTILIFE_SHIELD = "Antilife Shield";
+    public static final String AWAKEN = "Awaken";
+    public static final String BANISHING_SMITE = "Banished Smite";
+    public static final String BIGBYS_HAND = "Bigby's Hand";
+    public static final String CIRCLE_OF_POWER = "Circle of Power";
+    public static final String CLOUDKILL = "Cloudkill";
+    public static final String COMMUNE = "Commune";
+    public static final String COMMUNE_WITH_NATURE = "Commune with Nature";
+    public static final String CONE_OF_GOLD = "Cone of Gold";
+    public static final String CONJURE_ELEMENTAL = "Conjure Elemental";
+    public static final String CONJURE_VOLLEY = "Conjure Volley";
+    public static final String CONTACT_OTHER_PLANE = "Contact Other Plane";
+    public static final String CONTAGION = "Contagion";
+    public static final String CREATION = "Creation";
+    public static final String DESTRUCTIVE_WAVE = "Destructive Wave";
+    public static final String DISPEL_EVIL_AND_GOOD = "Dispel Evil and Good";
+    public static final String DOMINATE_PERSON = "Dominate Person";
+    public static final String DREAM = "Dream";
+    public static final String FLAME_STRIKE = "Flame Strike";
+    public static final String GEAS = "Geas";
+    public static final String GREATER_RESTORATION = "Greater Restoration";
+    public static final String HALLOW = "Hallow";
+    public static final String HOLD_MONSTER = "Hold Monster";
+    public static final String INSECT_PLAGUE = "Insect Plague";
+    public static final String LEGEND_LORE = "";
+    public static final String MASS_CURE_WOUNDS = "Mass Cure Wounds";
+    public static final String MISLEAD = "Mislead";
+    public static final String MODIFY_MEMORY = "Modify Memory";
+    public static final String PASSWALL = "Passwall";
+    public static final String PLANAR_BINDING = "Planar Binding";
+    public static final String RAISE_DEAD = "Raise Dead";
+    public static final String RARYS_TELEPATHIC_BOND = "Rary's Telepathic Bond";
+    public static final String REINCARNATE = "Reincarnate";
+    public static final String SCRYING = "Scying";
+    public static final String SEEMING = "Seeming";
+    public static final String SWIFT_QUIVER = "Swift Quiver";
+    public static final String TELEKINESIS = "Telekinesis";
+    public static final String TELEPORTATION_CIRCLE = "Teleportation Circle";
+    public static final String TREE_STRIDE = "Tree Stride";
+    public static final String WALL_OF_FORCE = "Wall of Force";
+    public static final String WALL_OF_STONE = "Wall of Stone";
+
+    public static final String[] BARD_SPELLS_LVL_5 = {ANIMATE_OBJECTS, AWAKEN, DOMINATE_PERSON, DREAM, GEAS,
+            GREATER_RESTORATION, HOLD_MONSTER, LEGEND_LORE, MASS_CURE_WOUNDS, MISLEAD, MODIFY_MEMORY, PLANAR_BINDING,
+            RAISE_DEAD, RARYS_TELEPATHIC_BOND, SCRYING, SEEMING, TELEPORTATION_CIRCLE};
+
+    public static final String[] CLERIC_SPELLS_LVL_5 = {COMMUNE, CONTAGION, DISPEL_EVIL_AND_GOOD, FLAME_STRIKE, GEAS,
+            GREATER_RESTORATION, HALLOW, INSECT_PLAGUE, LEGEND_LORE, MASS_CURE_WOUNDS, PLANAR_BINDING, RAISE_DEAD,
+            SCRYING};
+
+    public static final String[] DRUID_SPELLS_LVL_5 = {ANTILIFE_SHIELD, AWAKEN, COMMUNE_WITH_NATURE, CONE_OF_GOLD,
+            CONJURE_ELEMENTAL, CONTAGION, GEAS, GREATER_RESTORATION, INSECT_PLAGUE, MASS_CURE_WOUNDS, PLANAR_BINDING,
+            REINCARNATE, SCRYING, TREE_STRIDE, WALL_OF_STONE};
+
+    public static final String[] PALADIN_SPELLS_LVL_5 = {BLINDING_SMITE, CIRCLE_OF_POWER, DESTRUCTIVE_WAVE,
+            DISPEL_EVIL_AND_GOOD, GEAS, RAISE_DEAD};
+
+    public static final String[] RANGER_SPELLS_LVL_5 = {COMMUNE_WITH_NATURE, CONJURE_VOLLEY, GREATER_RESTORATION,
+            SWIFT_QUIVER, TREE_STRIDE};
+
+    public static final String[] SORCERER_SPELLS_LVL_5 = {ANIMATE_OBJECTS, BIGBYS_HAND, CLOUDKILL, CONE_OF_GOLD,
+            CREATION, DOMINATE_PERSON, HOLD_MONSTER, INSECT_PLAGUE, SEEMING, TELEKINESIS, TELEPORTATION_CIRCLE,
+            WALL_OF_STONE};
+
+    public static final String[] WARLOCK_SPELLS_LVL_5 = {CONTACT_OTHER_PLANE, DREAM, HOLD_MONSTER, MISLEAD,
+            PLANAR_BINDING, SCRYING, TELEPORTATION_CIRCLE};
+
+    public static final String[] WIZARD_SPELLS_LVL_5 = {ANIMATE_OBJECTS, BIGBYS_HAND, CLOUDKILL, CONE_OF_GOLD,
+            CONJURE_ELEMENTAL, CONTACT_OTHER_PLANE, CREATION, DOMINATE_PERSON, DREAM, GEAS, HOLD_MONSTER, LEGEND_LORE,
+            MISLEAD, MODIFY_MEMORY, PASSWALL, PLANAR_BINDING, RARYS_TELEPATHIC_BOND, SCRYING, SEEMING, TELEKINESIS,
+            TELEPORTATION_CIRCLE, WALL_OF_FORCE, WALL_OF_STONE};
 }
