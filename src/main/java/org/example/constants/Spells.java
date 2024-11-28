@@ -2,6 +2,8 @@ package org.example.constants;
 
 import com.sun.javafx.scene.control.TabObservableList;
 
+import javax.swing.border.SoftBevelBorder;
+
 public class Spells {
 
     // SPELLS
@@ -478,4 +480,59 @@ public class Spells {
             CONJURE_ELEMENTAL, CONTACT_OTHER_PLANE, CREATION, DOMINATE_PERSON, DREAM, GEAS, HOLD_MONSTER, LEGEND_LORE,
             MISLEAD, MODIFY_MEMORY, PASSWALL, PLANAR_BINDING, RARYS_TELEPATHIC_BOND, SCRYING, SEEMING, TELEKINESIS,
             TELEPORTATION_CIRCLE, WALL_OF_FORCE, WALL_OF_STONE};
+
+    // LEVEL 6
+    public static final String ARCANE_GATE = "Arcane Gate";
+    public static final String BLADE_BARRIER = "Blade Barrier";
+    public static final String CHAIN_LIGHTNING = "Chain Lightning";
+    public static final String CIRCLE_OF_DEATH = "Circle of Death";
+    public static final String CONJURE_FEY = "Conjure Fey";
+    public static final String CONTINGENCY = "Contingency";
+    public static final String CREATE_UNDEAD = "Create Undead";
+    public static final String DISINTEGRATE = "Disintegrate";
+    public static final String DRAWMIJS_INSTANT_SUMMONS = "Drawmij's Instant Summons";
+    public static final String EYEBITE = "Eyebite";
+    public static final String FIND_THE_PATH = "Find the Path";
+    public static final String FLESH_TO_STONE = "Flesh to Stone";
+    public static final String FORBIDDANCE = "Forbiddacne";
+    public static final String GLOBE_OF_INVULNERABILITY = "Globe of Invulnerability";
+    public static final String GUARDS_AND_WARDS = "Guards and Wards";
+    public static final String HARM = "harm";
+    public static final String HEAL = "Heal";
+    public static final String HEROES_FEAST = "Heroes' Feast";
+    public static final String MAGIC_JAR = "Magic Jar";
+    public static final String MASS_SUGGESTION = "Mass Suggestion";
+    public static final String MOVE_EARTH = "Move Earth";
+    public static final String OTILUKES_FREEZING_SPHERE = "Otiluke's Freezing Sphere";
+    public static final String OTTOS_IRRESISTIBLE_DANCE = "Otto's Irresistible Dance";
+    public static final String PLANAR_ALLY = "Planar Ally";
+    public static final String PROGRAMMED_ILLUSION = "Programmed Illusion";
+    public static final String SUNBEAM = "Sunbeam";
+    public static final String TRANSPORT_VIA_PLANTS = "Transport via Plants";
+    public static final String TRUE_SEEING = "True Seeing";
+    public static final String WALL_OF_ICE = "Wall of Ice";
+    public static final String WALL_OF_THRONES = "Wall of Thorns";
+    public static final String WIND_WALK = "Wind Walk";
+    public static final String WORD_OF_RECALL = "Word of Recall";
+
+    public static final String[] BARD_SPELLS_LVL_6 = {EYEBITE, FIND_THE_PATH, GUARDS_AND_WARDS, HEROES_FEAST,
+            MASS_SUGGESTION, OTTOS_IRRESISTIBLE_DANCE, PROGRAMMED_ILLUSION, TRUE_SEEING};
+
+    public static final String[] CLERIC_SPELLS_LVL_6 = {BLADE_BARRIER, CREATE_UNDEAD, FIND_THE_PATH, FORBIDDANCE, HARM,
+            HEAL, HEROES_FEAST, PLANAR_ALLY, SUNBEAM, TRUE_SEEING, WORD_OF_RECALL};
+
+    public static final String[] DRUID_SPELLS_LVL_6 = {CONJURE_FEY, FIND_THE_PATH, FLESH_TO_STONE, HEAL, HEROES_FEAST,
+            MOVE_EARTH, SUNBEAM, TRANSPORT_VIA_PLANTS, WALL_OF_THRONES, WIND_WALK};
+
+    public static final String[] SORCERER_SPELLS_LVL_6 = {ARCANE_GATE, CHAIN_LIGHTNING, CIRCLE_OF_DEATH, DISINTEGRATE,
+            EYEBITE, FLESH_TO_STONE, GLOBE_OF_INVULNERABILITY, MASS_SUGGESTION, MOVE_EARTH, OTILUKES_FREEZING_SPHERE,
+            SUNBEAM, TRUE_SEEING};
+
+    public static final String[] WARLOCK_SPELLS_LVL_6 = {ARCANE_GATE, CIRCLE_OF_DEATH, CONJURE_FEY, CREATE_UNDEAD,
+            EYEBITE, FLESH_TO_STONE, MASS_SUGGESTION, TRUE_SEEING};
+
+    public static final String[] WIZARD_SPELLS_LVL_6 = {ARCANE_GATE, CHAIN_LIGHTNING, CIRCLE_OF_DEATH, CONTINGENCY,
+            CREATE_UNDEAD, DISINTEGRATE, DRAWMIJS_INSTANT_SUMMONS, EYEBITE, FLESH_TO_STONE, GLOBE_OF_INVULNERABILITY,
+            GUARDS_AND_WARDS, MAGIC_JAR, MASS_SUGGESTION, MOVE_EARTH, OTILUKES_FREEZING_SPHERE, OTTOS_IRRESISTIBLE_DANCE,
+            PROGRAMMED_ILLUSION, SUNBEAM, TRUE_SEEING, WALL_OF_ICE};
 }
