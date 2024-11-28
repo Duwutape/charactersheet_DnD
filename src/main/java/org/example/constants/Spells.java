@@ -1,5 +1,7 @@
 package org.example.constants;
 
+import com.sun.javafx.scene.control.TabObservableList;
+
 public class Spells {
 
     // SPELLS
@@ -337,4 +339,69 @@ public class Spells {
             LEOMUNDS_TINY_HUT, LIGHTNING_BOLT, MAGIC_CIRCLE, MAJOR_IMAGE, NONDETECTION, PHANTOM_STEED,
             PROTECTION_FROM_ENERGY, REMOVE_CURSE, SENDING, SLEET_STORM, SLOW, SPEAK_WITH_DEAD, STINKING_CLOUD, TONGUES,
             VAMPIRIC_TOUCH, WATER_BREATHING};
+
+    // LEVEL 4
+    public static final String ARCANE_EYE = "Arcane Eye";
+    public static final String AURA_OF_LIFE = "Aura of Life";
+    public static final String AURA_OF_PURITY = "Aura of Purity";
+    public static final String BANISHMENT = "Banishment";
+    public static final String BLIGHT = "Blight";
+    public static final String COMPULSION = "Compulsion";
+    public static final String CONFUSION = "Confusion";
+    public static final String CONJURE_MINOR_ELEMENTS = "Conjure Minor Elements";
+    public static final String CONJURE_WOODLAND_BEINGS = "Conjure Woodland Beings";
+    public static final String CONTROL_WATER = "Control Water";
+    public static final String DEATH_WARD = "Death Ward";
+    public static final String DIMENSION_DOOR = "Dimension Door";
+    public static final String DIVINATION = "Divination";
+    public static final String DOMINATE_BEAST = "Dominate Beast";
+    public static final String EVARDS_BLACK_TENTACLES = "Evard's Black Tentacles";
+    public static final String FABRICATE = "Fabricate";
+    public static final String FIRE_SHIELD = "Fire Shield";
+    public static final String FREEDOM_OF_MOVEMENT = "Freedom of Movement";
+    public static final String GIANT_INSECT = "Giant Insect";
+    public static final String GRASPING_VINE = "Grasping Vine";
+    public static final String GREATER_INVISIBILITY = "Greater Invisibility";
+    public static final String GUARDIAN_OF_FAITH = "Guardian of Faith";
+    public static final String HALLUCINATORY_TERRAIN = "Hallucinatory Terrain";
+    public static final String ICE_STORM = "Ice Storm";
+    public static final String LEOMUNDS_SECRET_CHEST = "Leomund's Secret Chest";
+    public static final String LOCATE_CREATURE = "Locate Creature";
+    public static final String MORDENKAINENS_FAITHFUL_HOUND = "Mordekainen's Faithful Hound";
+    public static final String MORDEKAINNENS_PRIVATE_SANCTUM = "Mordekainen's Private Sanctum";
+    public static final String OTILUKES_RESILIENT_SPARE = "Otiluke's Resilient Sphere";
+    public static final String PHANTASMAL_KILLER = "Phantasmal Killer";
+    public static final String POLYMORPH = "Polymorph";
+    public static final String STAGGERING_SMITE = "Staggering Smite";
+    public static final String STONE_SHAPE = "Stone Shape";
+    public static final String STONESKIN = "Stoneskin";
+    public static final String WALL_OF_FIRE = "Wall of Fire";
+
+    public static final String[] BARD_SPELLS_LVL_4 = {COMPULSION, CONFUSION, DIMENSION_DOOR, FREEDOM_OF_MOVEMENT,
+            GREATER_INVISIBILITY, HALLUCINATORY_TERRAIN, LOCATE_CREATURE, PHANTASMAL_KILLER, POLYMORPH};
+
+    public static final String[] CLERIC_SPELLS_LVL_4 = {AURA_OF_LIFE, AURA_OF_PURITY, BANISHMENT, CONTROL_WATER,
+            DEATH_WARD, DIVINATION, FREEDOM_OF_MOVEMENT, GUARDIAN_OF_FAITH, LOCATE_CREATURE, STONE_SHAPE};
+
+    public static final String[] DRUID_SPELLS_LVL_4 = {BLIGHT, CONFUSION, CONJURE_MINOR_ELEMENTS,
+            CONJURE_WOODLAND_BEINGS, CONTROL_WATER, DIVINATION, DOMINATE_BEAST, FIRE_SHIELD, FREEDOM_OF_MOVEMENT,
+            GIANT_INSECT, GRASPING_VINE, HALLUCINATORY_TERRAIN, ICE_STORM, LOCATE_CREATURE, POLYMORPH, STONE_SHAPE,
+            STONESKIN, WALL_OF_FIRE};
+
+    public static final String[] PALADIN_SPELLS_LVL_4 = {AURA_OF_LIFE, AURA_OF_PURITY, BANISHMENT, DEATH_WARD,
+            LOCATE_CREATURE, STAGGERING_SMITE};
+
+    public static final String[] RANGER_SPELLS_LVL_4 = {CONJURE_WOODLAND_BEINGS, DOMINATE_BEAST, FREEDOM_OF_MOVEMENT,
+            GRASPING_VINE, LOCATE_CREATURE, STONESKIN};
+
+    public static final String[] SORCERER_SPELLS_LVL_4 = {BANISHMENT, BLIGHT, CONFUSION, DIMENSION_DOOR, FIRE_SHIELD,
+            GREATER_INVISIBILITY, ICE_STORM, POLYMORPH, STONESKIN, WALL_OF_FIRE};
+
+    public static final String[] WARLOCK_SPELLS_LVL_4 = {BANISHMENT, BLIGHT, DIMENSION_DOOR, HALLUCINATORY_TERRAIN};
+
+    public static final String[] WIZARD_SPELLS_LVL_4 = {ARCANE_EYE, BANISHMENT, BLIGHT, CONFUSION,
+            CONJURE_MINOR_ELEMENTS, CONTROL_WATER, DIMENSION_DOOR, DIVINATION, EVARDS_BLACK_TENTACLES, FABRICATE,
+            FIRE_SHIELD, GREATER_INVISIBILITY, HALLUCINATORY_TERRAIN, ICE_STORM, LEOMUNDS_SECRET_CHEST, LOCATE_CREATURE,
+            MORDENKAINENS_FAITHFUL_HOUND, MORDEKAINNENS_PRIVATE_SANCTUM, OTILUKES_RESILIENT_SPARE, PHANTASMAL_KILLER,
+            POLYMORPH, STONE_SHAPE, STONESKIN, WALL_OF_FIRE};
 }

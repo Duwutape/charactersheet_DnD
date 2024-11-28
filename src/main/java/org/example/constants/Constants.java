@@ -2,6 +2,7 @@ package org.example.constants;
 
 public class Constants {
 
+
     // SCREEN TITLES
     public static final String MENU = "CharSheet - Menu";
     public static final String CREATE_CHAR = "CharSheet - Create Character";
