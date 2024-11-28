@@ -1,15 +1,5 @@
 package org.example.constants;
 
-import com.sun.javafx.scene.control.TabObservableList;
-
-import javax.management.StandardEmitterMBean;
-import javax.net.ssl.SNIHostName;
-import javax.swing.border.SoftBevelBorder;
-import java.awt.image.DataBuffer;
-import java.util.concurrent.RejectedExecutionException;
-import java.util.concurrent.SubmissionPublisher;
-import java.util.concurrent.SynchronousQueue;
-
 public class Spells {
 
     // SPELLS
@@ -253,7 +243,8 @@ public class Spells {
             MISTY_STEP, PHANTASMAL_FORCE, SCORCHING_RAY, SEE_INVISIBILITY, SHATTER, SPIDER_CLIMB, SUGGESTION, WEB};
 
     public static final String[] WARLOCK_SPELLS_LVL_2 = {CLOUD_OF_DAGGERS, CROWN_OF_MADNESS, DARKNESS, ENTHRALL,
-            HOLD_PERSON, INVISIBILITY, MIRROR_IMAGE, MISTY_STEP, RAY_OF_ENFEEBLEMENT, SHATTER, SPIDER_CLIMB, SUGGESTION};
+            HOLD_PERSON, INVISIBILITY, MIRROR_IMAGE, MISTY_STEP, RAY_OF_ENFEEBLEMENT, SHATTER, SPIDER_CLIMB,
+            SUGGESTION};
 
     public static final String[] WIZARD_SPELLS_LVL_2 = {ALTER_SELF, ARCANE_LOCK, AUGURY, BLINDNESS_DEAFNESS, BLUR,
             CLOUD_OF_DAGGERS, CONTINUAL_FLAME, CROWN_OF_MADNESS, DARKNESS, DARKVISION, DETECT_THOUGHTS, ENHANCE_ABILITY,
@@ -320,12 +311,12 @@ public class Spells {
 
     public static final String[] CLERIC_SPELLS_LVL_3 = {ANIMATE_DEAD, AURA_OF_VITALITY, BEACON_OF_HOPE, BESTOW_CURSE,
             CLAIRVOYANCE, CREATE_FOOD_AND_WATER, DAYLIGHT, DISPEL_MAGIC, FEIGN_DEATH, GLYPH_OF_WARDING, MAGIC_CIRCLE,
-            MASS_HEALING_WORD, MELD_INTO_STONE, PROTECTION_FROM_ENERGY, REMOVE_CURSE, REVIVIFY, SENDING, SPEAK_WITH_DEAD,
-            SPIRIT_GUARDIANS, TONGUES, WATER_WALK};
+            MASS_HEALING_WORD, MELD_INTO_STONE, PROTECTION_FROM_ENERGY, REMOVE_CURSE, REVIVIFY, SENDING,
+            SPEAK_WITH_DEAD, SPIRIT_GUARDIANS, TONGUES, WATER_WALK};
 
     public static final String[] DRUID_SPELLS_LVL_3 = {AURA_OF_VITALITY, CALL_LIGHTNING, CONJURE_ANIMALS, DAYLIGHT,
-            DISPEL_MAGIC, ELEMENTAL_WEAPON, FEIGN_DEATH, MELD_INTO_STONE, PLANT_GROWTH, PROTECTION_FROM_ENERGY, REVIVIFY,
-            SLEET_STORM, SPEAK_WITH_PLANTS, WATER_BREATHING, WATER_WALK, WIND_WALL};
+            DISPEL_MAGIC, ELEMENTAL_WEAPON, FEIGN_DEATH, MELD_INTO_STONE, PLANT_GROWTH, PROTECTION_FROM_ENERGY,
+            REVIVIFY, SLEET_STORM, SPEAK_WITH_PLANTS, WATER_BREATHING, WATER_WALK, WIND_WALL};
 
     public static final String[] PALADIN_SPELLS_LVL_3 = {AURA_OF_VITALITY, BLINDING_SMITE, CREATE_FOOD_AND_WATER,
             CRUSADERS_MANTLE, DAYLIGHT, DISPEL_MAGIC, ELEMENTAL_WEAPON, MAGIC_CIRCLE, REMOVE_CURSE, REVIVIFY};
@@ -539,8 +530,8 @@ public class Spells {
 
     public static final String[] WIZARD_SPELLS_LVL_6 = {ARCANE_GATE, CHAIN_LIGHTNING, CIRCLE_OF_DEATH, CONTINGENCY,
             CREATE_UNDEAD, DISINTEGRATE, DRAWMIJS_INSTANT_SUMMONS, EYEBITE, FLESH_TO_STONE, GLOBE_OF_INVULNERABILITY,
-            GUARDS_AND_WARDS, MAGIC_JAR, MASS_SUGGESTION, MOVE_EARTH, OTILUKES_FREEZING_SPHERE, OTTOS_IRRESISTIBLE_DANCE,
-            PROGRAMMED_ILLUSION, SUNBEAM, TRUE_SEEING, WALL_OF_ICE};
+            GUARDS_AND_WARDS, MAGIC_JAR, MASS_SUGGESTION, MOVE_EARTH, OTILUKES_FREEZING_SPHERE,
+            OTTOS_IRRESISTIBLE_DANCE, PROGRAMMED_ILLUSION, SUNBEAM, TRUE_SEEING, WALL_OF_ICE};
 
     // LEVEL 7
     public static final String CONJURE_CELESTIAL = "Conjure Celestial";
@@ -579,9 +570,9 @@ public class Spells {
 
     public static final String[] WARLOCK_SPELLS_LVL_7 = {ETHEREALNESS, FINGER_OF_DEATH, FORCECAGE, PLANE_SHIFT};
 
-    public static final String[] WIZARD_SPELLS_LVL_7 = {DELAYED_BLAST_FIREBALL, ETHEREALNESS, FINGER_OF_DEATH, FORCECAGE,
-            MIRAGE_ARCANE, MORDENKAINENS_MAGNIFICENT_MANSION, MORDENKAINENS_SWORD, PLANE_SHIFT, PRISMATIC_SPRAY,
-            PROJECT_IMAGE, REVERSE_GRAVITY, SEQUESTER, SIMULACRUM, SYMBOL, TELEPORT};
+    public static final String[] WIZARD_SPELLS_LVL_7 = {DELAYED_BLAST_FIREBALL, ETHEREALNESS, FINGER_OF_DEATH,
+            FORCECAGE, MIRAGE_ARCANE, MORDENKAINENS_MAGNIFICENT_MANSION, MORDENKAINENS_SWORD, PLANE_SHIFT,
+            PRISMATIC_SPRAY, PROJECT_IMAGE, REVERSE_GRAVITY, SEQUESTER, SIMULACRUM, SYMBOL, TELEPORT};
 
     // LEVEL 8
     public static final String ANIMAL_SHAPES = "Animal Shapes";
@@ -599,14 +590,15 @@ public class Spells {
     public static final String MAZE = "Maze";
     public static final String MIND_BLANK = "Mind Blank";
     public static final String POWER_WORD_STUN = "Power Word Stun";
-    public static final String SUNBURST = "Sinburst";
+    public static final String SUNBURST = "Sunburst";
     public static final String TELEPATHY = "Telepathy";
     public static final String TSUNAMI = "Tsunami";
 
     public static final String[] BARD_SPELLS_LVL_8 = {ANTIPATHY_SYMPATHY, DOMINATE_MONSTER, FEEBLEMIND, GILBNESS,
             MIND_BLANK, POWER_WORD_STUN};
 
-    public static final String[] CLERIC_SPELLS_LVL_8 = {ANTIMAGIC_FIELD, CONTROL_WEATHER, EARTHQUAKE, HOLY_AURA, SUNBURST};
+    public static final String[] CLERIC_SPELLS_LVL_8 = {ANTIMAGIC_FIELD, CONTROL_WEATHER, EARTHQUAKE, HOLY_AURA,
+            SUNBURST};
 
     public static final String[] DRUID_SPELLS_LVL_8 = {ANIMAL_SHAPES, ANTIPATHY_SYMPATHY, CONTROL_WEATHER, EARTHQUAKE,
             FEEBLEMIND, INCENDIARY_CLOUD, SUNBURST, TSUNAMI};
@@ -619,4 +611,40 @@ public class Spells {
 
     public static final String[] WIZARD_SPELLS_LVL_8 = {ANTIMAGIC_FIELD, ANTIPATHY_SYMPATHY, CLONE, MAZE, MIND_BLANK,
             POWER_WORD_STUN, SUNBURST, TELEPATHY};
+
+    // LEVEL 9
+    public static final String ASTRAL_PROJECTION = "Astral Projection";
+    public static final String FORESIGHT = "Foresight";
+    public static final String GATE = "Gate";
+    public static final String IMPRISONMENT = "Imprisonment";
+    public static final String MASS_HEAL = "Mass Heal";
+    public static final String METEOR_SWARM = "Meteor Swarm";
+    public static final String POWER_WORD_HEAL = "Power Word Heal";
+    public static final String POWER_WORD_KILL = "Power Word Kill";
+    public static final String PRISMATIC_WALL = "Prismatic Wall";
+    public static final String SHAPECHANGE = "Shapechange";
+    public static final String STORM_OF_VENGEANCE = "Storm of Vengeance";
+    public static final String TIME_STOP = "Time Stop";
+    public static final String TRUE_POLYMORPH = "True Polymorph";
+    public static final String TRUE_RESURRECTION = "True Resurrection";
+    public static final String WEIRD = "Weird";
+    public static final String WISH = "Wish";
+
+    public static final String[] BARD_SPELLS_LVL_9 = {FORESIGHT, POWER_WORD_HEAL, POWER_WORD_KILL, PRISMATIC_WALL,
+            TRUE_POLYMORPH};
+
+    public static final String[] CLERIC_SPELLS_LVL_9 = {ASTRAL_PROJECTION, GATE, MASS_HEAL, POWER_WORD_HEAL,
+            TRUE_RESURRECTION};
+
+    public static final String[] DRUID_SPELLS_LVL_9 = {FORESIGHT, SHAPECHANGE, STORM_OF_VENGEANCE, TRUE_RESURRECTION};
+
+    public static final String[] MONK_SPELLS_LVL_9 = {ASTRAL_PROJECTION};
+
+    public static final String[] SORCERER_SPELLS_LVL_9 = {GATE, METEOR_SWARM, POWER_WORD_KILL, TIME_STOP, WISH};
+
+    public static final String[] WARLOCK_SPELLS_LVL_9 = {ASTRAL_PROJECTION, FORESIGHT, GATE, IMPRISONMENT,
+            POWER_WORD_KILL, TRUE_POLYMORPH, WEIRD};
+
+    public static final String[] WIZARD_SPELLS_LVL_9 = {ASTRAL_PROJECTION, FORESIGHT, GATE, IMPRISONMENT, METEOR_SWARM,
+            POWER_WORD_KILL, PRISMATIC_WALL, SHAPECHANGE, TIME_STOP, TRUE_POLYMORPH, WEIRD, WISH};
 }
