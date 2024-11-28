@@ -2,8 +2,12 @@ package org.example.constants;
 
 import com.sun.javafx.scene.control.TabObservableList;
 
+import javax.management.StandardEmitterMBean;
+import javax.net.ssl.SNIHostName;
 import javax.swing.border.SoftBevelBorder;
 import java.awt.image.DataBuffer;
+import java.util.concurrent.RejectedExecutionException;
+import java.util.concurrent.SubmissionPublisher;
 import java.util.concurrent.SynchronousQueue;
 
 public class Spells {
@@ -578,4 +582,41 @@ public class Spells {
     public static final String[] WIZARD_SPELLS_LVL_7 = {DELAYED_BLAST_FIREBALL, ETHEREALNESS, FINGER_OF_DEATH, FORCECAGE,
             MIRAGE_ARCANE, MORDENKAINENS_MAGNIFICENT_MANSION, MORDENKAINENS_SWORD, PLANE_SHIFT, PRISMATIC_SPRAY,
             PROJECT_IMAGE, REVERSE_GRAVITY, SEQUESTER, SIMULACRUM, SYMBOL, TELEPORT};
+
+    // LEVEL 8
+    public static final String ANIMAL_SHAPES = "Animal Shapes";
+    public static final String ANTIMAGIC_FIELD = "Antimagic Field";
+    public static final String ANTIPATHY_SYMPATHY = "Antipathy/Sympathy";
+    public static final String CLONE = "Clone";
+    public static final String CONTROL_WEATHER = "Control Weather";
+    public static final String DEMIPLANE = "Demiplane";
+    public static final String DOMINATE_MONSTER = "Dominate Monster";
+    public static final String EARTHQUAKE = "Earthquake";
+    public static final String FEEBLEMIND = "Feeblemind";
+    public static final String GILBNESS = "Gilbness";
+    public static final String HOLY_AURA = "Holy Aura";
+    public static final String INCENDIARY_CLOUD = "Incendiary Cloud";
+    public static final String MAZE = "Maze";
+    public static final String MIND_BLANK = "Mind Blank";
+    public static final String POWER_WORD_STUN = "Power Word Stun";
+    public static final String SUNBURST = "Sinburst";
+    public static final String TELEPATHY = "Telepathy";
+    public static final String TSUNAMI = "Tsunami";
+
+    public static final String[] BARD_SPELLS_LVL_8 = {ANTIPATHY_SYMPATHY, DOMINATE_MONSTER, FEEBLEMIND, GILBNESS,
+            MIND_BLANK, POWER_WORD_STUN};
+
+    public static final String[] CLERIC_SPELLS_LVL_8 = {ANTIMAGIC_FIELD, CONTROL_WEATHER, EARTHQUAKE, HOLY_AURA, SUNBURST};
+
+    public static final String[] DRUID_SPELLS_LVL_8 = {ANIMAL_SHAPES, ANTIPATHY_SYMPATHY, CONTROL_WEATHER, EARTHQUAKE,
+            FEEBLEMIND, INCENDIARY_CLOUD, SUNBURST, TSUNAMI};
+
+    public static final String[] SORCERER_SPELLS_LVL_8 = {DEMIPLANE, DOMINATE_MONSTER, EARTHQUAKE, INCENDIARY_CLOUD,
+            POWER_WORD_STUN, SUNBURST};
+
+    public static final String[] WARLOCK_SPELLS_LVL_8 = {DEMIPLANE, DOMINATE_MONSTER, FEEBLEMIND, GILBNESS,
+            POWER_WORD_STUN};
+
+    public static final String[] WIZARD_SPELLS_LVL_8 = {ANTIMAGIC_FIELD, ANTIPATHY_SYMPATHY, CLONE, MAZE, MIND_BLANK,
+            POWER_WORD_STUN, SUNBURST, TELEPATHY};
 }
