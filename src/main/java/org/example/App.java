@@ -9,7 +9,7 @@ import org.example.controller.MenuController;
 
 import java.io.IOException;
 
-import static org.example.Constants.*;
+import static org.example.constants.Constants.*;
 
 public class App extends Application {
     private Stage stage;

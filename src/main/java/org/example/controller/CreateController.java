@@ -9,12 +9,10 @@ import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.example.App;
-import org.example.Constants;
+import org.example.constants.Constants;
 import org.example.Main;
-import org.example.model.Char;
 import org.example.service.CreateService;
 
 import java.awt.*;

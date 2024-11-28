@@ -5,7 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import org.example.App;
-import org.example.Constants;
+import org.example.constants.Constants;
 import org.example.Main;
 
 import java.io.IOException;

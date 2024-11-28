@@ -4,9 +4,7 @@ import org.example.classes.*;
 import org.example.model.Choice;
 import org.example.model.GameClass;
 
-import java.util.HashMap;
-
-import static org.example.Constants.*;
+import static org.example.constants.Constants.*;
 
 public class GameClassService {
 
