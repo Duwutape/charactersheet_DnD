@@ -1,10 +1,17 @@
 package org.example.service;
 
 import org.example.classes.*;
+import org.example.constants.Constants;
 import org.example.model.Choice;
 import org.example.model.GameClass;
+import org.example.model.Spell;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.example.constants.Constants.*;
+import static org.example.constants.Spells.*;
+
 
 public class GameClassService {
 
@@ -53,13 +60,13 @@ public class GameClassService {
         }
     }
 
-    private void abilitySkillImprovement(GameClass gameClass){
+    private void abilitySkillImprovement(GameClass gameClass) {
         Choice choice = new Choice();
         choice.setName(ABILITY_SCORE_IMPROVEMENT);
         gameClass.addChoose(choice);
     }
 
-    private void expertise(GameClass gameClass, int amount){
+    private void expertise(GameClass gameClass, int amount) {
         Choice choice = new Choice();
         choice.setName(EXPERTISE);
         choice.setAmount(amount);
@@ -79,20 +86,20 @@ public class GameClassService {
                 choice.addOptions(ANIMAL_HANDLING, ATHLETICS, INTIMIDATION, NATURE, PERCEPTION, SURVIVAL);
                 barbarian.addChoose(choice);
                 barbarian.addWeaponProfs(SIMPLE_WEAPON, MARTIAL_WEAPON);
-                barbarian.addArmorTraining(LIGHT_ARMOR, MEDIUM_ARMOR, SHIELD);
+                barbarian.addArmorTraining(LIGHT_ARMOR, MEDIUM_ARMOR, Constants.SHIELD);
             }
             case 1 -> {
                 barbarian.setProfBonus(2);
-                barbarian.addFeatures(RAGE,UNARMORED_DEFENCE);
+                barbarian.addFeatures(RAGE, UNARMORED_DEFENCE);
                 barbarian.setAmountRages(2);
                 barbarian.setRageMod(2);
             }
-            case 2 -> barbarian.addFeatures(DANGER_SENSE,RECKLESS_ATTACK);
+            case 2 -> barbarian.addFeatures(DANGER_SENSE, RECKLESS_ATTACK);
             case 3 -> {
                 Choice choice = new Choice();
                 choice.setName(BARBARIAN + " " + SUBCLASS);
                 choice.setAmount(1);
-                choice.addOptions(BERSERKER,TOTEM_WARRIOR);
+                choice.addOptions(BERSERKER, TOTEM_WARRIOR);
                 barbarian.addChoose(choice);
                 barbarian.setAmountRages(3);
             }
@@ -101,7 +108,7 @@ public class GameClassService {
             }
             case 5 -> {
                 barbarian.setProfBonus(3);
-                barbarian.addFeatures(EXTRA_ATTACK,FAST_MOVEMENT);
+                barbarian.addFeatures(EXTRA_ATTACK, FAST_MOVEMENT);
             }
             case 6 -> {
                 switch (barbarian.getSubclass()) {
@@ -111,23 +118,21 @@ public class GameClassService {
                         Choice choice = new Choice();
                         choice.setName(TOTEM_ANIMAL);
                         choice.setAmount(1);
-                        choice.addOptions(BEAR,EAGLE,WOLF);
+                        choice.addOptions(BEAR, EAGLE, WOLF);
                     }
                 }
             }
             case 7 -> {
                 barbarian.addFeatures(FERAL_INSTINCT);
             }
-            case 8 -> {
-                abilitySkillImprovement(barbarian);
-            }
+            case 8 -> abilitySkillImprovement(barbarian);
             case 9 -> {
                 barbarian.setProfBonus(4);
                 barbarian.addFeatures(BRUTAL_CRITICAL_1);
                 barbarian.setRageMod(3);
             }
             case 10 -> {
-                switch (barbarian.getSubclass()){
+                switch (barbarian.getSubclass()) {
                     case BERSERKER -> barbarian.addFeatures(INTIMIDATING_PRESENCE);
                     case TOTEM_WARRIOR -> barbarian.addFeatures(SPIRIT_WALKER);
                 }
@@ -143,14 +148,14 @@ public class GameClassService {
                 barbarian.removeFeature(BRUTAL_CRITICAL_1);
             }
             case 14 -> {
-                switch (barbarian.getSubclass()){
+                switch (barbarian.getSubclass()) {
                     case BERSERKER -> barbarian.addFeatures(RETALIATION);
                     case TOTEM_WARRIOR -> {
                         barbarian.addFeatures(TOTEMIC_ATTUNEMENT);
                         Choice choice = new Choice();
                         choice.setName(TOTEM_ANIMAL);
                         choice.setAmount(1);
-                        choice.addOptions(BEAR,EAGLE,WOLF);
+                        choice.addOptions(BEAR, EAGLE, WOLF);
                     }
                 }
             }
@@ -198,45 +203,45 @@ public class GameClassService {
                 bard.setProfBonus(2);
                 bard.addFeatures(SPELLCASTING);
                 bard.addFeatures(BARDIC_INSPIRATION_D6);
-                bard.addSpellSlot(0,2);
-                bard.addSpellSlot(1,2);
+                bard.addSpellSlot(0, 2);
+                bard.addSpellSlot(1, 2);
                 bard.setAmountPreparedSpells(4);
             }
             case 2 -> {
                 bard.addFeatures(JACK_OF_ALL_TRADES);
                 bard.addFeatures(SONG_OF_REST_D6);
-                bard.addSpellSlot(1,3);
+                bard.addSpellSlot(1, 3);
                 bard.setAmountPreparedSpells(5);
             }
             case 3 -> {
                 Choice choice = new Choice();
                 choice.setName(BARD + " " + SUBCLASS);
                 choice.setAmount(1);
-                expertise(bard, 2);
                 choice.addOptions(LORE, VALOR);
                 bard.addChoose(choice);
-                bard.addSpellSlot(1,4);
-                bard.addSpellSlot(2,2);
+                expertise(bard, 2);
+                bard.addSpellSlot(1, 4);
+                bard.addSpellSlot(2, 2);
                 bard.setAmountPreparedSpells(6);
             }
             case 4 -> {
                 abilitySkillImprovement(bard);
-                bard.addSpellSlot(0,3);
-                bard.addSpellSlot(2,3);
-                bard.addSpellSlot(3,2);
+                bard.addSpellSlot(0, 3);
+                bard.addSpellSlot(2, 3);
                 bard.setAmountPreparedSpells(7);
             }
             case 5 -> {
                 bard.setProfBonus(3);
-                bard.addFeatureAtIndex(BARDIC_INSPIRATION_D8,bard.getFeatures().indexOf(BARDIC_INSPIRATION_D6));
+                bard.addFeatureAtIndex(BARDIC_INSPIRATION_D8, bard.getFeatures().indexOf(BARDIC_INSPIRATION_D6));
                 bard.removeFeature(BARDIC_INSPIRATION_D6);
                 bard.addFeatures(FONT_OF_INSPIRATION);
+                bard.addSpellSlot(3, 2);
                 bard.setAmountPreparedSpells(8);
             }
             case 6 -> {
                 bard.addFeatures(COUNTERCHARM);
+                bard.addSpellSlot(3, 3);
                 bard.setAmountPreparedSpells(9);
-                bard.addSpellSlot(3,3);
                 switch (bard.getSubclass()) {
                     case LORE -> {
                         Choice choice = new Choice();
@@ -248,16 +253,51 @@ public class GameClassService {
                 }
             }
             case 7 -> {
-
+                bard.addSpellSlot(4, 1);
+                bard.setAmountPreparedSpells(10);
             }
             case 8 -> {
-
+                abilitySkillImprovement(bard);
+                bard.addSpellSlot(4, 2);
+                bard.setAmountPreparedSpells(11);
             }
             case 9 -> {
-
+                bard.setProfBonus(4);
+                bard.addFeatureAtIndex(SONG_OF_REST_D8, bard.getFeatures().indexOf(SONG_OF_REST_D6));
+                bard.removeFeature(SONG_OF_REST_D6);
+                bard.addSpellSlot(4, 3);
+                bard.addSpellSlot(5, 1);
+                bard.setAmountPreparedSpells(12);
             }
             case 10 -> {
+                bard.addFeatureAtIndex(BARDIC_INSPIRATION_D10, bard.getFeatures().indexOf(BARDIC_INSPIRATION_D8));
+                bard.removeFeature(BARDIC_INSPIRATION_D8);
+                expertise(bard, 2);
+                bard.addFeatures(MAGICAL_SECRETS);
+                Choice choice = new Choice();
+                choice.setName(MAGICAL_SECRETS);
+                choice.setAmount(2);
+                ArrayList<String> posSpells = new ArrayList<>();
+                posSpells.addAll(List.of(ALL_CANTRIPS));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_1));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_2));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_3));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_4));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_5));
 
+
+                for (String posSpell : posSpells) {
+                    boolean found = false;
+                    for (Spell spell : bard.getSpells()) {
+                        if (spell.getNAME().equals(posSpell)) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    if (!found) {
+                        choice.addOptions(posSpell);
+                    }
+                }
             }
             case 11 -> {
 
@@ -294,261 +334,471 @@ public class GameClassService {
 
     private void updateCleric(Cleric cleric) {
         switch (cleric.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+            }
+            case 1 -> {
+            }
+            case 2 -> {
+            }
+            case 3 -> {
+            }
+            case 4 -> {
+            }
+            case 5 -> {
+            }
+            case 6 -> {
+            }
+            case 7 -> {
+            }
+            case 8 -> {
+            }
+            case 9 -> {
+            }
+            case 10 -> {
+            }
+            case 11 -> {
+            }
+            case 12 -> {
+            }
+            case 13 -> {
+            }
+            case 14 -> {
+            }
+            case 15 -> {
+            }
+            case 16 -> {
+            }
+            case 17 -> {
+            }
+            case 18 -> {
+            }
+            case 19 -> {
+            }
+            case 20 -> {
+            }
         }
     }
 
     private void updateDruid(Druid druid) {
         switch (druid.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+            }
+            case 1 -> {
+            }
+            case 2 -> {
+            }
+            case 3 -> {
+            }
+            case 4 -> {
+            }
+            case 5 -> {
+            }
+            case 6 -> {
+            }
+            case 7 -> {
+            }
+            case 8 -> {
+            }
+            case 9 -> {
+            }
+            case 10 -> {
+            }
+            case 11 -> {
+            }
+            case 12 -> {
+            }
+            case 13 -> {
+            }
+            case 14 -> {
+            }
+            case 15 -> {
+            }
+            case 16 -> {
+            }
+            case 17 -> {
+            }
+            case 18 -> {
+            }
+            case 19 -> {
+            }
+            case 20 -> {
+            }
         }
     }
 
     private void updateFighter(Fighter fighter) {
         switch (fighter.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+            }
+            case 1 -> {
+            }
+            case 2 -> {
+            }
+            case 3 -> {
+            }
+            case 4 -> {
+            }
+            case 5 -> {
+            }
+            case 6 -> {
+            }
+            case 7 -> {
+            }
+            case 8 -> {
+            }
+            case 9 -> {
+            }
+            case 10 -> {
+            }
+            case 11 -> {
+            }
+            case 12 -> {
+            }
+            case 13 -> {
+            }
+            case 14 -> {
+            }
+            case 15 -> {
+            }
+            case 16 -> {
+            }
+            case 17 -> {
+            }
+            case 18 -> {
+            }
+            case 19 -> {
+            }
+            case 20 -> {
+            }
         }
     }
 
     private void updateMonk(Monk monk) {
         switch (monk.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+            }
+            case 1 -> {
+            }
+            case 2 -> {
+            }
+            case 3 -> {
+            }
+            case 4 -> {
+            }
+            case 5 -> {
+            }
+            case 6 -> {
+            }
+            case 7 -> {
+            }
+            case 8 -> {
+            }
+            case 9 -> {
+            }
+            case 10 -> {
+            }
+            case 11 -> {
+            }
+            case 12 -> {
+            }
+            case 13 -> {
+            }
+            case 14 -> {
+            }
+            case 15 -> {
+            }
+            case 16 -> {
+            }
+            case 17 -> {
+            }
+            case 18 -> {
+            }
+            case 19 -> {
+            }
+            case 20 -> {
+            }
         }
     }
 
     private void updatePaladin(Paladin paladin) {
         switch (paladin.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+            }
+            case 1 -> {
+            }
+            case 2 -> {
+            }
+            case 3 -> {
+            }
+            case 4 -> {
+            }
+            case 5 -> {
+            }
+            case 6 -> {
+            }
+            case 7 -> {
+            }
+            case 8 -> {
+            }
+            case 9 -> {
+            }
+            case 10 -> {
+            }
+            case 11 -> {
+            }
+            case 12 -> {
+            }
+            case 13 -> {
+            }
+            case 14 -> {
+            }
+            case 15 -> {
+            }
+            case 16 -> {
+            }
+            case 17 -> {
+            }
+            case 18 -> {
+            }
+            case 19 -> {
+            }
+            case 20 -> {
+            }
         }
     }
 
     private void updateRanger(Ranger ranger) {
         switch (ranger.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+            }
+            case 1 -> {
+            }
+            case 2 -> {
+            }
+            case 3 -> {
+            }
+            case 4 -> {
+            }
+            case 5 -> {
+            }
+            case 6 -> {
+            }
+            case 7 -> {
+            }
+            case 8 -> {
+            }
+            case 9 -> {
+            }
+            case 10 -> {
+            }
+            case 11 -> {
+            }
+            case 12 -> {
+            }
+            case 13 -> {
+            }
+            case 14 -> {
+            }
+            case 15 -> {
+            }
+            case 16 -> {
+            }
+            case 17 -> {
+            }
+            case 18 -> {
+            }
+            case 19 -> {
+            }
+            case 20 -> {
+            }
         }
     }
 
     private void updateRouge(Rogue rogue) {
         switch (rogue.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+            }
+            case 1 -> {
+            }
+            case 2 -> {
+            }
+            case 3 -> {
+            }
+            case 4 -> {
+            }
+            case 5 -> {
+            }
+            case 6 -> {
+            }
+            case 7 -> {
+            }
+            case 8 -> {
+            }
+            case 9 -> {
+            }
+            case 10 -> {
+            }
+            case 11 -> {
+            }
+            case 12 -> {
+            }
+            case 13 -> {
+            }
+            case 14 -> {
+            }
+            case 15 -> {
+            }
+            case 16 -> {
+            }
+            case 17 -> {
+            }
+            case 18 -> {
+            }
+            case 19 -> {
+            }
+            case 20 -> {
+            }
         }
     }
 
     private void updateSorcerer(Sorcerer sorcerer) {
         switch (sorcerer.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+            }
+            case 1 -> {
+            }
+            case 2 -> {
+            }
+            case 3 -> {
+            }
+            case 4 -> {
+            }
+            case 5 -> {
+            }
+            case 6 -> {
+            }
+            case 7 -> {
+            }
+            case 8 -> {
+            }
+            case 9 -> {
+            }
+            case 10 -> {
+            }
+            case 11 -> {
+            }
+            case 12 -> {
+            }
+            case 13 -> {
+            }
+            case 14 -> {
+            }
+            case 15 -> {
+            }
+            case 16 -> {
+            }
+            case 17 -> {
+            }
+            case 18 -> {
+            }
+            case 19 -> {
+            }
+            case 20 -> {
+            }
         }
     }
 
     private void updateWarlock(Warlock warlock) {
         switch (warlock.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+            }
+            case 1 -> {
+            }
+            case 2 -> {
+            }
+            case 3 -> {
+            }
+            case 4 -> {
+            }
+            case 5 -> {
+            }
+            case 6 -> {
+            }
+            case 7 -> {
+            }
+            case 8 -> {
+            }
+            case 9 -> {
+            }
+            case 10 -> {
+            }
+            case 11 -> {
+            }
+            case 12 -> {
+            }
+            case 13 -> {
+            }
+            case 14 -> {
+            }
+            case 15 -> {
+            }
+            case 16 -> {
+            }
+            case 17 -> {
+            }
+            case 18 -> {
+            }
+            case 19 -> {
+            }
+            case 20 -> {
+            }
         }
     }
 
     private void updateWizard(Wizard wizard) {
         switch (wizard.getLevel()) {
-            case 0 -> {}
-            case 1 -> {}
-            case 2 -> {}
-            case 3 -> {}
-            case 4 -> {}
-            case 5 -> {}
-            case 6 -> {}
-            case 7 -> {}
-            case 8 -> {}
-            case 9 -> {}
-            case 10 -> {}
-            case 11 -> {}
-            case 12 -> {}
-            case 13 -> {}
-            case 14 -> {}
-            case 15 -> {}
-            case 16 -> {}
-            case 17 -> {}
-            case 18 -> {}
-            case 19 -> {}
-            case 20 -> {}
+            case 0 -> {
+            }
+            case 1 -> {
+            }
+            case 2 -> {
+            }
+            case 3 -> {
+            }
+            case 4 -> {
+            }
+            case 5 -> {
+            }
+            case 6 -> {
+            }
+            case 7 -> {
+            }
+            case 8 -> {
+            }
+            case 9 -> {
+            }
+            case 10 -> {
+            }
+            case 11 -> {
+            }
+            case 12 -> {
+            }
+            case 13 -> {
+            }
+            case 14 -> {
+            }
+            case 15 -> {
+            }
+            case 16 -> {
+            }
+            case 17 -> {
+            }
+            case 18 -> {
+            }
+            case 19 -> {
+            }
+            case 20 -> {
+            }
         }
     }
 
