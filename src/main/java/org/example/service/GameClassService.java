@@ -73,6 +73,22 @@ public class GameClassService {
         gameClass.addChoose(choice);
     }
 
+    private void removeKnownSpells(GameClass gameClass, Choice choice, ArrayList<String> posSpells) {
+
+        for (String posSpell : posSpells) {
+            boolean found = false;
+            for (Spell spell : gameClass.getSpells()) {
+                if (spell.getNAME().equals(posSpell)) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                choice.addOptions(posSpell);
+            }
+        }
+    }
+
     private void updateBarbarian(Barbarian barbarian) {
         switch (barbarian.getLevel()) {
             case 0 -> {
@@ -247,7 +263,15 @@ public class GameClassService {
                         Choice choice = new Choice();
                         choice.setName(ADDITIONAL_MAGICAL_SECRETS);
                         choice.setAmount(2);
-                        choice.addOptions();
+                        ArrayList<String> posSpells = new ArrayList<>();
+                        posSpells.addAll(List.of(ALL_CANTRIPS));
+                        posSpells.addAll(List.of(ALL_SPELLS_LVL_1));
+                        posSpells.addAll(List.of(ALL_SPELLS_LVL_2));
+                        posSpells.addAll(List.of(ALL_SPELLS_LVL_3));
+
+                        removeKnownSpells(bard,choice,posSpells);
+                        bard.addChoose(choice);
+                        bard.addAmountAdditionalSpells(2);
                     }
                     case VALOR -> bard.addFeatures(EXTRA_ATTACK);
                 }
@@ -285,49 +309,94 @@ public class GameClassService {
                 posSpells.addAll(List.of(ALL_SPELLS_LVL_4));
                 posSpells.addAll(List.of(ALL_SPELLS_LVL_5));
 
+                removeKnownSpells(bard,choice,posSpells);
+                bard.addChoose(choice);
+                bard.addAmountAdditionalSpells(2);
 
-                for (String posSpell : posSpells) {
-                    boolean found = false;
-                    for (Spell spell : bard.getSpells()) {
-                        if (spell.getNAME().equals(posSpell)) {
-                            found = true;
-                            break;
-                        }
-                    }
-                    if (!found) {
-                        choice.addOptions(posSpell);
-                    }
-                }
+                bard.addSpellSlot(5,2);
+                bard.setAmountPreparedSpells(14);
             }
             case 11 -> {
-
+                bard.addSpellSlot(6,1);
+                bard.setAmountPreparedSpells(15);
             }
             case 12 -> {
-
+                abilitySkillImprovement(bard);
             }
             case 13 -> {
-
+                bard.setProfBonus(5);
+                bard.addFeatureAtIndex(SONG_OF_REST_D10,bard.getFeatures().indexOf(SONG_OF_REST_D8));
+                bard.removeFeature(SONG_OF_REST_D8);
+                bard.addSpellSlot(7,1);
+                bard.setAmountPreparedSpells(16);
             }
             case 14 -> {
+                Choice choice = new Choice();
+                choice.setName(MAGICAL_SECRETS);
+                choice.setAmount(2);
+                ArrayList<String> posSpells = new ArrayList<>();
+                posSpells.addAll(List.of(ALL_CANTRIPS));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_1));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_2));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_3));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_4));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_5));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_6));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_7));
 
+                removeKnownSpells(bard,choice,posSpells);
+                bard.addChoose(choice);
+                bard.addAmountAdditionalSpells(2);
+
+                switch (bard.getSubclass()) {
+                    case LORE -> bard.addFeatures(PEERLESS_SKILL);
+                    case VALOR -> bard.addFeatures(BATTLE_MAGIC);
+                }
+                bard.setAmountPreparedSpells(18);
             }
             case 15 -> {
-
+                bard.addFeatureAtIndex(BARDIC_INSPIRATION_D12,bard.getFeatures().indexOf(BARDIC_INSPIRATION_D10));
+                bard.removeFeature(BARDIC_INSPIRATION_D10);
+                bard.addSpellSlot(8,1);
+                bard.setAmountPreparedSpells(19);
             }
-            case 16 -> {
-
-            }
+            case 16 -> abilitySkillImprovement(bard);
             case 17 -> {
-
+                bard.setProfBonus(6);
+                bard.addFeatureAtIndex(SONG_OF_REST_D12,bard.getFeatures().indexOf(SONG_OF_REST_D10));
+                bard.removeFeature(SONG_OF_REST_D10);
+                bard.addSpellSlot(9,1);
+                bard.setAmountPreparedSpells(20);
             }
             case 18 -> {
+                Choice choice = new Choice();
+                choice.setName(MAGICAL_SECRETS);
+                choice.setAmount(2);
+                ArrayList<String> posSpells = new ArrayList<>();
+                posSpells.addAll(List.of(ALL_CANTRIPS));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_1));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_2));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_3));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_4));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_5));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_6));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_7));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_8));
+                posSpells.addAll(List.of(ALL_SPELLS_LVL_9));
 
+                removeKnownSpells(bard,choice,posSpells);
+                bard.addChoose(choice);
+                bard.addAmountAdditionalSpells(2);
+                bard.addSpellSlot(5,3);
+                bard.setAmountPreparedSpells(22);
             }
             case 19 -> {
-
+                abilitySkillImprovement(bard);
+                bard.addSpellSlot(6,2);
             }
             case 20 -> {
-
+                bard.addFeatures(SUPERIOR_INSPIRATION);
+                bard.addSpellSlot(7,2);
             }
         }
     }

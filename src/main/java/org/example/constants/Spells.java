@@ -472,7 +472,7 @@ public class Spells {
     public static final String HALLOW = "Hallow";
     public static final String HOLD_MONSTER = "Hold Monster";
     public static final String INSECT_PLAGUE = "Insect Plague";
-    public static final String LEGEND_LORE = "";
+    public static final String LEGEND_LORE = "Legend Lore";
     public static final String MASS_CURE_WOUNDS = "Mass Cure Wounds";
     public static final String MISLEAD = "Mislead";
     public static final String MODIFY_MEMORY = "Modify Memory";

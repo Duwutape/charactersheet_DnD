@@ -22,6 +22,7 @@ public class GameClass {
 
     //spells (bard/cleric/druid/paladin/ranger/sorcerer/warlock/wizard)
     private int amountPreparedSpells;
+    private int amountAdditionalSpells;
     private HashMap<Integer, Integer> spellSlots = new HashMap<>();
     private ArrayList<Spell> spells;
 
@@ -172,6 +173,22 @@ public class GameClass {
 
     public void setAmountPreparedSpells(int amountPreparedSpells) {
         this.amountPreparedSpells = amountPreparedSpells;
+    }
+
+    public int getAmountAdditionalSpells() {
+        return amountAdditionalSpells;
+    }
+
+    public void setAmountAdditionalSpells(int amountAdditionalSpells) {
+        this.amountAdditionalSpells = amountAdditionalSpells;
+    }
+
+    public void addAmountAdditionalSpells(int amountAdditionalSpells) {
+        this.amountAdditionalSpells += amountAdditionalSpells;
+    }
+
+    public void removeAmountAdditionalSpells(int amountAdditionalSpells) {
+        this.amountAdditionalSpells -= amountAdditionalSpells;
     }
 
     public HashMap<Integer, Integer> getSpellSlots() {
