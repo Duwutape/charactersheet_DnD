@@ -33,6 +33,15 @@ public class Constants {
     public static final String LORE = "College of Lore";
     public static final String VALOR = "College of Valor";
 
+    // CLERIC SUBCLASSES
+    public static final String KNOWLEDGE_DOMAIN = "Knowledge Domain";
+    public static final String LIFE_DOMAIN = "Life Domain";
+    public static final String LIGHT_DOMAIN = "Light Domain";
+    public static final String NATURE_DOMAIN = "Nature Domain";
+    public static final String TEMPEST_DOMAIN = "Tempest Domain";
+    public static final String TRICKERY_DOMAIN = "Trickery Domain";
+    public static final String WAR_DOMAIN = "War Domain";
+
     // SPECIES NAMES
 
     // ABILITIES
@@ -64,6 +73,7 @@ public class Constants {
     public static final String SUBCLASS = "Subclass";
     public static final String ABILITY_SCORE_IMPROVEMENT = "Ability Score Improvement";
     public static final String SUBCLASS_FEATURE = "Subclass Feature";
+    public static final String SPELLCASTING = "Spellcasting";
 
     // BARBARIAN FEATURES
     public static final String BRUTAL_CRITICAL_1 = "Brutal Critical (1 die)";
@@ -106,7 +116,6 @@ public class Constants {
     public static final String BARDIC_INSPIRATION_D8 = "Bardic Inspiration (d8)";
     public static final String BARDIC_INSPIRATION_D10 = "Bardic Inspiration (d10)";
     public static final String BARDIC_INSPIRATION_D12 = "Bardic Inspiration (d12)";
-    public static final String SPELLCASTING = "Spellcasting";
     public static final String EXPERTISE = "Expertise";
     public static final String JACK_OF_ALL_TRADES = "Jack of All Trades";
     public static final String FONT_OF_INSPIRATION = "Font of Inspiration";
@@ -127,6 +136,73 @@ public class Constants {
     public static final String COMBAT_INSPIRATION = "Combat Inspiration";
     // extra attack in barbarian features
     public static final String BATTLE_MAGIC = "Battle Magic";
+
+    // CLERIC FEATURES
+    public static final String CHANNEL_DIVINITY = "Channel Divinity";
+    public static final String CHANNEL_DIVINITY_1 = CHANNEL_DIVINITY + " (1/rest)";
+    public static final String CHANNEL_DIVINITY_2 = CHANNEL_DIVINITY + " (3/rest)";
+    public static final String CHANNEL_DIVINITY_3 = CHANNEL_DIVINITY + " (2/rest)";
+    public static final String DESTROY_UNDEAD_CR_05 = "Destroy Undead (CR 1/2)";
+    public static final String DESTROY_UNDEAD_CR_1 = "Destroy Undead (CR 1)";
+    public static final String DESTROY_UNDEAD_CR_2 = "Destroy Undead (CR 2)";
+    public static final String DESTROY_UNDEAD_CR_3 = "Destroy Undead (CR 3)";
+    public static final String DESTROY_UNDEAD_CR_4 = "Destroy Undead (CR 4)";
+    public static final String DIVINE_INTERVENTION_1 = "Divine Intervention";
+    public static final String DIVINE_INTERVENTION_2 = "Improved Divine Intervention";
+
+    // KNOWLEDGE DOMAIN
+    public static final String BLESSING_OF_KNOWLEDGE = "Blessing of Knowledge";
+    public static final String KNOWLEDGE_OF_THE_AGES = CHANNEL_DIVINITY + ": Knowledge of the Ages";
+    public static final String READ_THOUGHTS = CHANNEL_DIVINITY + ": Read Thoughts";
+    public static final String POTENT_SPELLCASING = "Potent Spellcasting";
+    public static final String VISIONS_OF_THE_PAST = "Vision of the Past";
+
+    // LIFE DOMAIN
+    public static final String BONUS_PROFICIENCY = "Bonus Proficiency";
+    public static final String DISCIPLE_OF_LIFE = "Disciple of Life";
+    public static final String PRESERVE_LIFE = CHANNEL_DIVINITY + ": Preserve Life";
+    public static final String BLESSED_HEALER = "Blessed Healer";
+    public static final String DIVINE_STRIKE = "Divine Strike";
+    public static final String SUPREME_HEALING = "Supreme Healing";
+
+    // LIGHT DOMAIN
+    public static final String BONUS_CANTRIP = "Bonus Cantrip";
+    public static final String WARDING_FLARE = "Warding Flare";
+    public static final String RADIANCE_OF_THE_DAWN = CHANNEL_DIVINITY + "Radiance of the Dawn";
+    public static final String IMPROVED_FLARE = "Improved Flare";
+    // POTENT_SPELLCASTING in KNOWLEDGE DOMAIN
+    public static final String CORONA_OF_LIGHT = "Corona of Light";
+
+    // NATURE DOMAIN
+    public static final String ACOLYTE_OF_NATURE = "Acolyte of Nature";
+    // BONUS_PROFICIENCY in LIFE DOMAIN
+    public static final String CHARM_ANIMALS_AND_PLANTS = CHANNEL_DIVINITY + ": Charm Animals and Plants";
+    public static final String DAMPEN_ELEMENTS = "Dampen Elements";
+    // DIVINE_STRIKE in LIFE_DOMAIN
+    public static final String MASTER_OF_NATURE = "Master of Nature";
+
+    // TEMPEST DOMAIN
+    // BONUS_PROFICIENCY in LIFE DOMAIN
+    public static final String WRATH_OF_THE_STORM = "Wrath of the Storm";
+    public static final String DESTRUCTIVE_WRATH = CHANNEL_DIVINITY + ": Destructive Wrath";
+    public static final String THUNDERBOLT_STRIKE = "Thunderbolt Strike";
+    // DIVINE_STRIKE in LIFE_DOMAIN
+    public static final String STORMBORN = "Stormborn";
+
+    // TRICKERY DOMAIN
+    public static final String BLESSING_OF_THE_TRICKSTER = "Blessing of the Trickster";
+    public static final String INVOKE_DUPLICITY = CHANNEL_DIVINITY + ": Invoke Duplicity";
+    public static final String CLOAK_OF_SHADOWS = CHANNEL_DIVINITY + ": Cloak of Shadows";
+    // DIVINE_STRIKE in LIFE_DOMAIN
+    public static final String IMPROVED_DUPLICITY = "Improved Duplicity";
+
+    // WAR DOMAIN
+    // BONUS_PROFICIENCY in LIFE DOMAIN
+    public static final String WAR_PRIEST = "War Priest";
+    public static final String GUIDED_STRIKE = CHANNEL_DIVINITY + ": Guided Strike";
+    public static final String WAR_GODS_BLESSING = CHANNEL_DIVINITY + ": War God's Blessing";
+    // DIVINE_STRIKE in LIFE_DOMAIN
+    public static final String AVATAR_OF_BATTLE = "Avatar of Battle";
 
     // SKILLS
     public static final String ACROBATICS = "Acrobatics";
